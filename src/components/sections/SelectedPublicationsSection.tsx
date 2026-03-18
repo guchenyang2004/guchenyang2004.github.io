@@ -64,8 +64,8 @@ const PublicationCard = ({ pub }: { pub: any }) => {
                     fontWeight={isOwner || isCoFirstAuthor ? 'semibold' : 'normal'}
                     color={isOwner ? ownerColor : normalAuthorColor}
                   >
-                    {author}
-                    {isCoFirstAuthor && !hasStarInName && <Text as="sup" fontSize="2xs" color="cyan.400">*</Text>}
+                    {cleanName}
+                    {(hasStarInName || isCoFirstAuthor) && <Text as="sup" fontSize="2xs" color="orange.400">*</Text>}
                     {idx < pub.authors.length - 1 && ', '}
                   </Text>
                 )
@@ -167,7 +167,11 @@ const SelectedPublicationsSection: React.FC = () => {
   const selectedPubs = useMemo(
     () => publications
       .filter((pub) => selectedPublicationIds.has(pub.id))
-      .sort((a, b) => b.year - a.year),
+      .sort((a, b) => {
+        const aVal = a.year * 100 + parseInt(a.month ?? '0')
+        const bVal = b.year * 100 + parseInt(b.month ?? '0')
+        return bVal - aVal
+      }),
     [publications]
   )
 

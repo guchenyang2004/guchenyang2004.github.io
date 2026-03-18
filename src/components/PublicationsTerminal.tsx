@@ -66,6 +66,7 @@ const PublicationsTerminal: React.FC = () => {
   const [searchQuery, setSearchQuery] = useState('')
   const [selectedYear, setSelectedYear] = useState<string>('all')
   const [selectedVenue, setSelectedVenue] = useState<string>('all')
+  const [selectedRole, setSelectedRole] = useState<string>('all')
   const [expandedItems, setExpandedItems] = useState<Record<string, boolean>>({})
   const [showStats, setShowStats] = useState(false)
   const [currentTime, setCurrentTime] = useState(new Date())
@@ -131,6 +132,15 @@ const PublicationsTerminal: React.FC = () => {
     if (selectedVenue !== 'all') {
       filtered = filtered.filter(pub => pub.venueType === selectedVenue)
     }
+
+    // Filter by author role
+    if (selectedRole === 'first') {
+      filtered = filtered.filter(pub => pub.specialBadges?.includes('First Author'))
+    } else if (selectedRole === 'cofirst') {
+      filtered = filtered.filter(pub => pub.specialBadges?.includes('Co-First'))
+    } else if (selectedRole === 'coauthor') {
+      filtered = filtered.filter(pub => !pub.isFirstAuthor && !pub.isCoFirst)
+    }
     
     // Sort by year (newest first), then by month
     filtered.sort((a, b) => {
@@ -139,7 +149,7 @@ const PublicationsTerminal: React.FC = () => {
     })
     
     return filtered
-  }, [publications, searchQuery, selectedYear, selectedVenue])
+  }, [publications, searchQuery, selectedYear, selectedVenue, selectedRole])
   
   // Get unique years for filter
   const availableYears = useMemo(() => {
@@ -178,6 +188,7 @@ const PublicationsTerminal: React.FC = () => {
         setSearchQuery('')
         setSelectedYear('all')
         setSelectedVenue('all')
+        setSelectedRole('all')
         break
       case 'help':
         alert('Commands: search <query>, filter year <year>, filter venue <type>, stats, clear, help')
@@ -381,7 +392,23 @@ const PublicationsTerminal: React.FC = () => {
                 <option value="demo">Demo</option>
                 <option value="preprint">Preprints</option>
               </Select>
-              
+
+              <Select
+                value={selectedRole}
+                onChange={(e) => setSelectedRole(e.target.value)}
+                size="sm"
+                w="160px"
+                bg={isDark ? 'rgba(0,0,0,0.2)' : 'white'}
+                border={`1px solid ${termBorder}`}
+                color={termText}
+                fontFamily="mono"
+              >
+                <option value="all">All Roles</option>
+                <option value="first">First Author</option>
+                <option value="cofirst">Co-First Author</option>
+                <option value="coauthor">Co-Author</option>
+              </Select>
+
               <IconButton
                 aria-label="Toggle stats"
                 icon={<FaChartBar />}

@@ -7,6 +7,7 @@ coFirstAuthors: [Yueru Jia, Jiaming Liu, Sixiang Chen, Chenyang Gu]
 venue: CVPR
 venueType: conference
 year: 2025
+month: "02"
 status: accepted
 isFirstAuthor: true
 isCorrespondingAuthor: false

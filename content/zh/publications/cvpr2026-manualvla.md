@@ -7,6 +7,8 @@ venueType: conference
 year: 2026
 status: accepted
 isFirstAuthor: true
+isCoFirst: true
+coFirstAuthors: [Chenyang Gu, Jiaming Liu, Hao Chen, Runzhong Huang]
 isCorrespondingAuthor: false
 specialBadges: ["First Author"]
 keywords: ["VLA", "Chain-of-Thought", "手册生成", "机器人操控"]

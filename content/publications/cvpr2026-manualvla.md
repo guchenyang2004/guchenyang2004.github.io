@@ -8,6 +8,7 @@ venueType: conference
 year: 2026
 status: accepted
 isFirstAuthor: true
+isCoFirst: true
 isCorrespondingAuthor: false
 specialBadges: ["First Author"]
 keywords: ["VLA", "Chain-of-Thought", "Manual Generation", "Robotic Manipulation"]
