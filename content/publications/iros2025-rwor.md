@@ -8,6 +8,7 @@ year: 2025
 status: accepted
 isFirstAuthor: false
 isCorrespondingAuthor: false
+tagline: "Generates robot demonstrations from human hand videos to enable robot policy learning without any robot data collection."
 featuredImage: /images/publications/rwor.png
 links:
   arxiv: "https://arxiv.org/abs/2507.03930"

@@ -8,6 +8,7 @@ year: 2025
 status: accepted
 isFirstAuthor: false
 isCorrespondingAuthor: false
+tagline: "A large-scale multi-embodiment manipulation benchmark with normative data to advance generalizable robot learning."
 emoji: "📖"
 featuredImage: /images/publications/robomind.png
 links:

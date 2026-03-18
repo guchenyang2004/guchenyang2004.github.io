@@ -235,9 +235,14 @@ const HeroSection = ({ title, avatar, research = [], researchLogos = {}, educati
               </SimpleGrid>
             )}
 
-            <Text fontSize="xs" color={textColor} lineHeight="tall" textAlign={['center', 'center', 'left']} w="full" fontStyle="italic">
+            <Text fontSize="sm" color={textColor} lineHeight="tall" textAlign={['center', 'center', 'left']} w="full">
               {siteConfig.tagline ?? ''}
             </Text>
+            {(siteConfig as any).motto && (
+              <Text fontSize="sm" fontWeight="semibold" fontStyle="italic" color={useColorModeValue('cyan.600', 'cyan.300')} textAlign={['center', 'center', 'left']} w="full" letterSpacing="wide">
+                {(siteConfig as any).motto}
+              </Text>
+            )}
           </VStack>
           <MotionBox
             initial={{ opacity: 0, scale: 0.95 }}
@@ -277,8 +282,8 @@ const HeroSection = ({ title, avatar, research = [], researchLogos = {}, educati
                   </Link>
                 </Tooltip>
                 <Tooltip label="WeChat" fontSize="xs" hasArrow placement="bottom" openDelay={200} fontFamily="mono">
-                  <Box as="button" onClick={wechatModal.onOpen} p={1.5} cursor="pointer" transition="all 0.2s" _hover={{ transform: 'scale(1.2)', opacity: 0.8 }}>
-                    <Image src="/images/wechat.png" alt="WeChat" boxSize={[3, 3.5]} objectFit="contain" borderRadius="sm" />
+                  <Box as="button" onClick={wechatModal.onOpen} p={1.5} cursor="pointer" color={textColor}  transition="all 0.2s" _hover={{color: 'cyan.400', transform: 'scale(1.2)'}}>
+                    <Image src="/images/wechat.svg" alt="WeChat" boxSize={[7]} objectFit="contain" borderRadius="sm" />
                   </Box>
                 </Tooltip>
               </HStack>

@@ -2,7 +2,7 @@
   {
     "type": "publication",
     "badge": "1 Paper",
-    "title": "CVPR 2026",
+    "title": "🎉 CVPR 2026",
     "description": "ManualVLA: A Unified VLA Model for Chain-of-Thought Manual Generation and Robotic Manipulation. (First Author)",
     "date": "February 2026",
     "sortDate": "2026-02-01",
@@ -14,7 +14,7 @@
   {
     "type": "publication",
     "badge": "1 Paper",
-    "title": "ICLR 2026",
+    "title": "🎉 ICLR 2026",
     "description": "HybridVLA: Collaborative Diffusion and Autoregression in a Unified Vision-Language-Action Model.",
     "date": "January 2026",
     "sortDate": "2026-01-15",
@@ -27,28 +27,45 @@
   {
     "type": "award",
     "badge": "Award",
-    "title": "Huanyu Scholarship",
-    "description": "Huanyu Scholarship (¥20,000) — Highest Honor of Peking University EECS.",
+    "title": "🏆 Huanyu Information Seeking Scholarship",
+    "description": "Huanyu Information Seeking Scholarship (¥20,000) — Highest Honor of Peking University EECS.",
     "date": "December 2025",
     "sortDate": "2025-12-15",
-    "links": []
+    "links": [
+      { "url": "https://news.pku.edu.cn/xwzh/6f0dc0cf44424144b157f601861384fe.htm", "icon": "FaNewspaper", "text": "News" }
+    ]
   },
   {
     "type": "publication",
-    "badge": "2 Papers",
-    "title": "NeurIPS 2025",
-    "description": "Fast-in-Slow (FiS-VLA): A Dual-System Foundation Model Unifying Fast Manipulation within Slow Reasoning. (Co-First Author) · AC-DiT: Adaptive Coordination Diffusion Transformer for Mobile Manipulation.",
+    "badge": "2 Paper",
+    "title": "🎉 NeurIPS 2025",
+    "description": "",
     "date": "September 2025",
     "sortDate": "2025-09-25",
-    "links": [
-      { "url": "https://arxiv.org/pdf/2506.01953", "icon": "FaFileAlt", "text": "FiS-VLA" },
-      { "url": "https://arxiv.org/abs/2507.01961", "icon": "FaFileAlt", "text": "AC-DiT" }
+    "links": [],
+    "papers": [
+      {
+        "title": "Fast-in-Slow: A Dual-System Foundation Model Unifying Fast Manipulation within Slow Reasoning. (Co-First Author)",
+        "links": [
+          { "url": "https://arxiv.org/pdf/2506.01953", "icon": "FaFileAlt", "text": "arXiv" },
+          { "url": "https://github.com/CHEN-H01/Fast-in-Slow", "icon": "FaGithub", "text": "Code" },
+          { "url": "https://fast-in-slow.github.io/", "icon": "FaGlobe", "text": "Project" }
+        ]
+      },
+      {
+        "title": "AC-DiT: Adaptive Coordination Diffusion Transformer for Mobile Manipulation.",
+        "links": [
+          { "url": "https://arxiv.org/abs/2507.01961", "icon": "FaFileAlt", "text": "arXiv" },
+          { "url": "https://github.com/PKU-HMI-Lab/AC-DiT", "icon": "FaGithub", "text": "Code" },
+          { "url": "https://ac-dit.github.io", "icon": "FaGlobe", "text": "Project" }
+        ]
+      }
     ]
   },
   {
     "type": "publication",
     "badge": "1 Paper",
-    "title": "CVPR 2025",
+    "title": "🎉 CVPR 2025",
     "description": "Lift3D Foundation Policy: Lifting 2D Large-Scale Pretrained Models for Robust 3D Robotic Manipulation. (Co-First Author)",
     "date": "February 2025",
     "sortDate": "2025-02-01",

@@ -2,7 +2,7 @@
   {
     "type": "publication",
     "badge": "1 篇论文",
-    "title": "CVPR 2026",
+    "title": "🎉 CVPR 2026",
     "description": "ManualVLA：面向思维链手册生成与机器人操控的统一VLA模型。（第一作者）",
     "date": "2026年2月",
     "sortDate": "2026-02-01",
@@ -14,7 +14,7 @@
   {
     "type": "publication",
     "badge": "1 篇论文",
-    "title": "ICLR 2026",
+    "title": "🎉 ICLR 2026",
     "description": "HybridVLA：统一视觉语言动作模型中的协作扩散与自回归。",
     "date": "2026年1月",
     "sortDate": "2026-01-15",
@@ -27,28 +27,45 @@
   {
     "type": "award",
     "badge": "奖项",
-    "title": "环宇奖学金",
-    "description": "环宇奖学金（¥20,000）——北京大学信息科学技术学院最高荣誉。",
+    "title": "🏆 环宇信息求索奖",
+    "description": "北京大学信息科学技术学院最高荣誉。",
     "date": "2025年12月",
     "sortDate": "2025-12-15",
-    "links": []
+    "links": [
+      { "url": "https://news.pku.edu.cn/xwzh/6f0dc0cf44424144b157f601861384fe.htm", "icon": "FaNewspaper", "text": "新闻" }
+    ]
   },
   {
     "type": "publication",
     "badge": "2 篇论文",
-    "title": "NeurIPS 2025",
-    "description": "Fast-in-Slow (FiS-VLA)：统一快速操控与慢速推理的双系统基础模型。（共同第一作者）· AC-DiT：面向移动操控的自适应协调扩散Transformer。",
+    "title": "🎉 NeurIPS 2025",
+    "description": "",
     "date": "2025年9月",
     "sortDate": "2025-09-25",
-    "links": [
-      { "url": "https://arxiv.org/pdf/2506.01953", "icon": "FaFileAlt", "text": "FiS-VLA" },
-      { "url": "https://arxiv.org/abs/2507.01961", "icon": "FaFileAlt", "text": "AC-DiT" }
+    "links": [],
+    "papers": [
+      {
+        "title": "Fast-in-Slow：统一快速操控与慢速推理的双系统基础模型。（共同第一作者）",
+        "links": [
+          { "url": "https://arxiv.org/pdf/2506.01953", "icon": "FaFileAlt", "text": "arXiv" },
+          { "url": "https://github.com/CHEN-H01/Fast-in-Slow", "icon": "FaGithub", "text": "代码" },
+          { "url": "https://fast-in-slow.github.io/", "icon": "FaGlobe", "text": "项目主页" }
+        ]
+      },
+      {
+        "title": "AC-DiT：面向移动操控的自适应协调扩散Transformer。",
+        "links": [
+          { "url": "https://arxiv.org/abs/2507.01961", "icon": "FaFileAlt", "text": "arXiv" },
+          { "url": "https://github.com/PKU-HMI-Lab/AC-DiT", "icon": "FaGithub", "text": "代码" },
+          { "url": "https://ac-dit.github.io", "icon": "FaGlobe", "text": "项目主页" }
+        ]
+      }
     ]
   },
   {
     "type": "publication",
     "badge": "1 篇论文",
-    "title": "CVPR 2025",
+    "title": "🎉 CVPR 2025",
     "description": "Lift3D Foundation Policy：提升二维大规模预训练模型以实现鲁棒的三维机器人操控。（共同第一作者）",
     "date": "2025年2月",
     "sortDate": "2025-02-01",

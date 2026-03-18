@@ -8,6 +8,7 @@ year: 2025
 status: accepted
 isFirstAuthor: false
 isCorrespondingAuthor: false
+tagline: "A 3D spatial-aware VLA model that leverages explicit 3D scene representations for robust multi-task manipulation."
 featuredImage: /images/publications/3dsvla.png
 links:
   paper: "https://proceedings.mlr.press/v305/li25g.html"

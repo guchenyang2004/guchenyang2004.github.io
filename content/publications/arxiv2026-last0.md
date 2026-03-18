@@ -8,6 +8,7 @@ year: 2026
 status: preprint
 isFirstAuthor: false
 isCorrespondingAuthor: false
+tagline: "Introduces latent spatio-temporal chain-of-thought reasoning into VLA models for improved spatial and temporal understanding."
 featuredImage: /images/publications/last0.png
 links:
   arxiv: "https://arxiv.org/abs/2601.05248"

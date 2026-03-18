@@ -8,6 +8,7 @@ year: 2025
 status: accepted
 isFirstAuthor: false
 isCorrespondingAuthor: false
+tagline: "Indoor 3D semantic occupancy prediction via a vertical slice representation for efficient spatial scene understanding."
 featuredImage: /images/publications/sliceocc.png
 links:
   arxiv: "https://arxiv.org/pdf/2501.16684"

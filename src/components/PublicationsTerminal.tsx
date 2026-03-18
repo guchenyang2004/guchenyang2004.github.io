@@ -32,6 +32,7 @@ import {
 import { keyframes } from '@emotion/react'
 import { getPublicationStats } from '../data'
 import { useLocalizedData } from '@/hooks/useLocalizedData'
+import { useTranslation } from 'react-i18next'
 import { FaChartBar, FaVideo, FaProjectDiagram, FaFileAlt, FaAtom, FaStar, FaRobot, FaGlobe, FaHandRock, FaCloudSun, FaFutbol } from 'react-icons/fa'
 import { IconType } from 'react-icons'
 import { highlightData } from '../utils/highlightData'
@@ -61,6 +62,7 @@ const PublicationsTerminal: React.FC = () => {
   const { colorMode } = useColorMode()
   const isDark = colorMode === 'dark'
   const { publications, siteOwner } = useLocalizedData()
+  const { t } = useTranslation()
   const [searchQuery, setSearchQuery] = useState('')
   const [selectedYear, setSelectedYear] = useState<string>('all')
   const [selectedVenue, setSelectedVenue] = useState<string>('all')
@@ -489,7 +491,7 @@ const PublicationsTerminal: React.FC = () => {
                       {pub.emoji && emojiIconMap[pub.emoji] && (
                         <Icon as={emojiIconMap[pub.emoji]} boxSize="14px" color={venueColors[pub.venueType].fg} mr={1} flexShrink={0} />
                       )}
-                      <Text fontWeight="medium" flex="1">
+                      <Text fontWeight="semibold" fontSize="md" flex="1">
                         {pub.title}
                       </Text>
                     </HStack>
@@ -547,7 +549,7 @@ const PublicationsTerminal: React.FC = () => {
                         </Badge>
                       ))}
                     </HStack>
-                    <Text fontSize="xs" color={termSecondary}>
+                    <Text fontSize="sm" color={termSecondary}>
                       {pub.authors.map((author, i) => {
                         const cleanAuthor = author.replace('*', '')
                         const hasAsterisk = author.includes('*')
@@ -579,6 +581,11 @@ const PublicationsTerminal: React.FC = () => {
                         </Text>
                       )}
                     </Text>
+                    {pub.tagline && (
+                      <Text fontSize="xs" color={useColorModeValue('gray.800', 'gray.100')} mt={1} fontStyle="italic" noOfLines={2}>
+                        {pub.tagline}
+                      </Text>
+                    )}
                   </Box>
                   
                   {/* Resources */}
@@ -594,14 +601,14 @@ const PublicationsTerminal: React.FC = () => {
                       {pub.links.arxiv && (
                         <Tooltip label="arXiv">
                           <Link href={pub.links.arxiv} isExternal onClick={(e) => e.stopPropagation()}>
-                            <Badge colorScheme="blue" fontSize="2xs">arXiv</Badge>
+                            <Badge colorScheme="red" fontSize="2xs">ARXIV</Badge>
                           </Link>
                         </Tooltip>
                       )}
                       {pub.links.code && (
                         <Tooltip label="Code">
                           <Link href={pub.links.code} isExternal onClick={(e) => e.stopPropagation()}>
-                            <Badge colorScheme="green" fontSize="2xs">CODE</Badge>
+                            <Badge colorScheme="orange" fontSize="2xs">CODE</Badge>
                           </Link>
                         </Tooltip>
                       )}
@@ -613,9 +620,9 @@ const PublicationsTerminal: React.FC = () => {
                         </Tooltip>
                       )}
                       {pub.links.wechat && (
-                        <Tooltip label="WeChat">
+                        <Tooltip label={t('about.wechat')}>
                           <Link href={pub.links.wechat} isExternal onClick={(e) => e.stopPropagation()}>
-                            <Badge colorScheme="yellow" fontSize="2xs">🆕</Badge>
+                            <Badge colorScheme="green" fontSize="2xs">{t('about.wechat').toUpperCase()}</Badge>
                           </Link>
                         </Tooltip>
                       )}
@@ -682,11 +689,12 @@ const PublicationsTerminal: React.FC = () => {
                               <Link key={key} href={url} isExternal>
                                 <Badge
                                   colorScheme={
-                                    key === 'code' ? 'green' :
-                                    key === 'paper' || key === 'arxiv' ? 'blue' :
+                                    key === 'arxiv' ? 'red' :
+                                    key === 'paper' ? 'blue' :
+                                    key === 'code' ? 'orange' :
                                     key === 'projectPage' || key === 'project' ? 'purple' :
-                                    key === 'wechat' ? 'yellow' :
-                                    key === 'demo' ? 'orange' :
+                                    key === 'wechat' ? 'green' :
+                                    key === 'demo' ? 'cyan' :
                                     key === 'dataset' ? 'teal' :
                                     'gray'
                                   }
@@ -694,7 +702,7 @@ const PublicationsTerminal: React.FC = () => {
                                   px={2}
                                   py={1}
                                 >
-                                  {key === 'wechat' ? '🆕 WeChat' :
+                                  {key === 'wechat' ? t('about.wechat') :
                                    key === 'projectPage' || key === 'project' ? 'Project' :
                                    key === 'arxiv' ? 'arXiv' :
                                    key.replace(/([A-Z])/g, ' $1').trim()}

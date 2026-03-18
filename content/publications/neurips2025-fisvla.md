@@ -11,6 +11,8 @@ status: accepted
 isFirstAuthor: true
 isCorrespondingAuthor: false
 specialBadges: ["Co-First"]
+keywords: ["VLA", "Dual-System", "Fast Manipulation", "Slow Reasoning"]
+tagline: "A dual-system foundation model that embeds fast action execution within slow language reasoning for robotic manipulation."
 links:
   arxiv: "https://arxiv.org/pdf/2506.01953"
   code: "https://github.com/CHEN-H01/Fast-in-Slow"

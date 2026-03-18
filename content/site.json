@@ -11,7 +11,8 @@
     ]
   },
   "title": "Hi there, I'm Chenyang Gu, an Embodied AI Learner💪",
-  "tagline": "Undergraduate researcher at Peking University, focusing on embodied AI, VLA models, and robotic manipulation.",
+  "tagline": "🎓 Undergraduate researcher at Peking University (EECS, 2022–2026), working towards General Policy for Real-World Embodied AI — spanning VLA Models, World Action Models, and Reinforcement Learning. 📄 Published 10 papers at CVPR, ICLR, NeurIPS, ICRA, RSS, IROS & CoRL, with first-author paper accepted by CVPR 2026 & co-first paper accepted by NeurIPS 2025, CVPR 2025. 🐱 Proud cat parent of Dàntǎ (Egg Tart). ☕️ Feel free to reach out — always open to discussions and potential collaborations!",
+  "motto": "✨ Do Everything Until Best.",
   "avatar": "art.JPG",
   "terminal": {
     "username": "chenyang",
@@ -20,7 +21,7 @@
       "build VLA models",
       "develop robotic manipulation",
       "explore 3D vision",
-      "push the frontier of robotics"
+      "play with Egg Tart"
     ],
     "skills": [
       "Python",

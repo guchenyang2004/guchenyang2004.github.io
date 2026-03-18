@@ -23,6 +23,7 @@ export interface NewsItem {
   emoji?: string
   sortDate?: string
   links: NewsLink[]
+  papers?: { title: string; links: NewsLink[] }[]
 }
 
 export interface Research {
@@ -143,6 +144,7 @@ export interface Publication {
   month?: string
   status: 'accepted' | 'published' | 'preprint'
   abstract?: string
+  tagline?: string
   keywords?: string[]
   links: {
     paper?: string

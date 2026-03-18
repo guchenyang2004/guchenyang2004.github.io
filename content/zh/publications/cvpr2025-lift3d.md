@@ -11,6 +11,7 @@ status: accepted
 isFirstAuthor: true
 isCorrespondingAuthor: false
 specialBadges: ["Co-First"]
+keywords: ["3D视觉", "基础策略", "机器人操控", "2D预训练模型"]
 emoji: "🔥"
 featuredImage: /images/publications/lift3d.png
 links:

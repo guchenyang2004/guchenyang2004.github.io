@@ -1,25 +1,25 @@
 ---
 journeyPhases:
-  - period: "2022 - 2026"
-    title: 北京大学 信息科学技术学院
-    org: 信息与计算科学 本科
-    description: "北京大学信息科学技术学院本科生，信息与计算科学专业。多次获得北京大学燕创资本奖学金、华泰科技证券奖学金，荣获三好学生、优秀学生干部等荣誉。"
-    tags: [北京大学, 信息与计算科学, 信息科学技术学院]
-  - period: "2024年11月 - 2025年6月"
-    title: 北京智源人工智能研究院
-    org: 具身多模态大模型研究中心 实习生
-    description: "多模态具身端到端模型设计与真机落地全栈流程，包括桌面垃圾清理、多模态感知-控制协同等任务场景。"
-    tags: [具身多模态大模型]
-  - period: "2025年6月 - 2025年10月"
-    title: 智平方
-    org: X-Lab 实习生
-    description: "参与 Fast-in-Slow 项目全栈科研与 Agilex Aloha、AlphaBot 真机模型落地。"
-    tags: [VLA, 快慢系统]
-  - period: "2025年10月 - 至今"
-    title: 至简动力
-    org: 联合实验室 实习生
-    description: ""
-    tags: [UWM, 强化学习]
+  - period: "2022 – 2026"
+    title: 本科科研与学业荣誉
+    org: 北京大学 / 信息科学技术学院
+    description: "**北京大学信息科学技术学院**本科生，**信息与计算科学**专业。荣获**环宇信息求索奖学金**（¥20,000，北京大学信科最高荣誉）、**燕创资本奖学金**（×2）、**华泰科技证券奖学金**，连续荣获**三好学生**（×2）与**优秀学生干部**称号。在 CVPR、ICLR、NeurIPS、ICRA、RSS、IROS、CoRL 等顶会发表 **10 篇论文**。"
+    tags: [北京大学, 信息与计算科学, 信息科学技术学院, 具身智能]
+  - period: "2024年11月 – 2025年6月"
+    title: 具身智能研究
+    org: 北京智源人工智能研究院（BAAI）
+    description: "在**北京智源人工智能研究院**具身多模态大模型研究中心实习。从事多模态具身端到端模型设计与**真机落地**全栈流程，涵盖桌面垃圾清理、多模态感知-控制协同等任务场景。参与贡献 **AC-DiT**（NeurIPS 2025）与 **Lift3D**（CVPR 2025）。"
+    tags: [具身AI, 多模态大模型, 真机部署]
+  - period: "2025年6月 – 2025年10月"
+    title: VLA 与双系统基础模型
+    org: 智平方 / X-Lab
+    description: "在**智平方 X-Lab** 参与核心科研项目 **Fast-in-Slow**（NeurIPS 2025，共同第一作者）——一种将快速操控融合于慢速推理的双系统基础模型。完成全栈科研与在 **Agilex Aloha** 和 **AlphaBot** 平台的真机模型落地。"
+    tags: [VLA, 双系统, 快慢架构, 真机部署]
+  - period: "2025年10月 – 至今"
+    title: VLA、世界动作模型与强化学习
+    org: 至简动力 / 联合实验室
+    description: "在**至简动力联合实验室**从事**视觉语言动作（VLA）模型**、**世界动作模型（World Action Model）**与**强化学习（Reinforcement Learning）**在机器人操控中的研究。项目包括 **ManualVLA**（CVPR 2026，第一作者）思维链手册生成、**TwinRL-VLA** 将基于世界模型的强化学习融入 VLA 框架，以及 **LaST₀** 潜在时空思维链推理。"
+    tags: [VLA, World Action Model, 强化学习, 思维链]
 mentorship:
   heading: "导师与合作者"
   mentees:

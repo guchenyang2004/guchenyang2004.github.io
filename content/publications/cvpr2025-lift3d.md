@@ -11,6 +11,8 @@ status: accepted
 isFirstAuthor: true
 isCorrespondingAuthor: false
 specialBadges: ["Co-First"]
+keywords: ["3D Vision", "Foundation Policy", "Robotic Manipulation", "2D Pretrained Models"]
+tagline: "Lifts 2D large-scale pretrained models into 3D policy learning for robust multi-task robotic manipulation."
 emoji: "🔥"
 featuredImage: /images/publications/lift3d.png
 links:

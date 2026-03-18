@@ -9,6 +9,7 @@ status: accepted
 isFirstAuthor: true
 isCorrespondingAuthor: false
 specialBadges: ["First Author"]
+keywords: ["VLA", "Chain-of-Thought", "手册生成", "机器人操控"]
 emoji: "🔥"
 featuredImage: /images/publications/manualvla.png
 links:

@@ -8,6 +8,7 @@ year: 2025
 status: accepted
 isFirstAuthor: false
 isCorrespondingAuthor: false
+tagline: "An adaptive coordination diffusion transformer that jointly controls the base and arm for whole-body mobile manipulation."
 emoji: "🛸"
 featuredImage: /images/publications/acdit.png
 links:

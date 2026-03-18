@@ -14,7 +14,7 @@ const PubLink = ({ href, icon, label, hoverColor }: { href: string; icon: string
       borderColor={useColorModeValue('gray.200', 'gray.600')}
       color={useColorModeValue('gray.600', 'gray.400')}
       fontSize="xs" fontFamily="mono" transition="all 0.15s"
-      _hover={{ borderColor: hoverColor || 'cyan.400', color: hoverColor || 'cyan.400', bg: useColorModeValue('gray.50', 'whiteAlpha.50') }}
+      _hover={{ borderColor: hoverColor || 'cyan.400', color: hoverColor || 'cyan.400', bg: useColorModeValue('gray.50', 'whiteAlpha.100') }}
     >
       <DynamicIcon name={icon} boxSize={3} />
       <Text>{label}</Text>
@@ -70,46 +70,55 @@ const PublicationCard = ({ pub }: { pub: any }) => {
                   </Text>
                 )
               })}
+              {pub.isCoFirst && (
+                <Text as="span" fontSize="2xs" color={equalContribColor} fontStyle="italic"> ({t('about.equalContribution')})</Text>
+              )}
             </Text>
             {pub.specialBadges && pub.specialBadges.length > 0 && (
               <HStack spacing={1.5} flexWrap="wrap" align="center">
                 {pub.specialBadges.map((badge: string) => (
                   <Text key={badge} fontSize="2xs" fontFamily="mono" px={2} py={0.5} borderRadius="sm" border="1px solid"
-                    borderColor={badge === 'First Author' || badge === 'Co-First' ? useColorModeValue('cyan.300', 'cyan.600') : badge === 'Oral' || badge === 'Spotlight' || badge === 'Best Paper' ? useColorModeValue('orange.200', 'orange.700') : useColorModeValue('gray.200', 'gray.600')}
-                    color={badge === 'First Author' || badge === 'Co-First' ? useColorModeValue('cyan.600', 'cyan.300') : badge === 'Oral' || badge === 'Spotlight' || badge === 'Best Paper' ? useColorModeValue('orange.600', 'orange.300') : useColorModeValue('gray.500', 'gray.400')}
-                    bg={badge === 'First Author' || badge === 'Co-First' ? useColorModeValue('cyan.50', 'whiteAlpha.50') : badge === 'Oral' || badge === 'Spotlight' || badge === 'Best Paper' ? useColorModeValue('orange.50', 'whiteAlpha.50') : 'transparent'}
+                    borderColor={badge === 'First Author' ? useColorModeValue('yellow.300', 'yellow.600') : badge === 'Co-First' ? useColorModeValue('cyan.300', 'cyan.600') : badge === 'Oral' || badge === 'Spotlight' || badge === 'Best Paper' ? useColorModeValue('orange.200', 'orange.700') : useColorModeValue('gray.200', 'gray.600')}
+                    color={badge === 'First Author' ? useColorModeValue('yellow.600', 'yellow.300') : badge === 'Co-First' ? useColorModeValue('cyan.600', 'cyan.300') : badge === 'Oral' || badge === 'Spotlight' || badge === 'Best Paper' ? useColorModeValue('orange.600', 'orange.300') : useColorModeValue('gray.500', 'gray.400')}
+                    bg={badge === 'First Author' ? useColorModeValue('yellow.50', 'whiteAlpha.50') : badge === 'Co-First' ? useColorModeValue('cyan.50', 'whiteAlpha.50') : badge === 'Oral' || badge === 'Spotlight' || badge === 'Best Paper' ? useColorModeValue('orange.50', 'whiteAlpha.50') : 'transparent'}
                   >{badge}</Text>
                 ))}
-                {pub.isCoFirst && (
-                  <Text fontSize="2xs" color={equalContribColor} fontStyle="italic">
-                    {t('about.equalContribution')}
-                  </Text>
-                )}
+                {pub.keywords && pub.keywords.map((kw: string) => {
+                  const k = kw.toLowerCase()
+                  const isVLA = k.includes('vla') || k.includes('language-action') || k.includes('language action')
+                  const isManip = k.includes('manipul') || k.includes('robot') || k.includes('fast')
+                  const isReason = k.includes('reason') || k.includes('chain') || k.includes('thought') || k.includes('slow')
+                  const is3D = k.includes('3d') || k.includes('vision') || k.includes('pretrain')
+                  const isSystem = k.includes('dual') || k.includes('system') || k.includes('foundation') || k.includes('world')
+                  const [bg, color] = isVLA
+                    ? [useColorModeValue('blue.50', 'rgba(99,179,237,0.1)'), useColorModeValue('blue.500', 'blue.300')]
+                    : isManip
+                    ? [useColorModeValue('orange.50', 'rgba(237,137,54,0.1)'), useColorModeValue('orange.500', 'orange.300')]
+                    : isReason
+                    ? [useColorModeValue('green.50', 'rgba(72,187,120,0.1)'), useColorModeValue('green.600', 'green.300')]
+                    : is3D
+                    ? [useColorModeValue('teal.50', 'rgba(56,178,172,0.1)'), useColorModeValue('teal.600', 'teal.300')]
+                    : isSystem
+                    ? [useColorModeValue('purple.50', 'rgba(159,122,234,0.1)'), useColorModeValue('purple.600', 'purple.300')]
+                    : [useColorModeValue('gray.100', 'gray.700'), useColorModeValue('gray.500', 'gray.400')]
+                  return (
+                    <Text key={kw} fontSize="2xs" fontFamily="mono" px={2} py={0.5} borderRadius="sm" bg={bg} color={color}>
+                      {kw}
+                    </Text>
+                  )
+                })}
               </HStack>
             )}
           </VStack>
           <Box w="full" h="1px" bg={useColorModeValue('gray.100', 'gray.700')} />
           <HStack spacing={1.5} flexWrap="wrap">
             {pub.links.paper && <PubLink href={pub.links.paper} icon="FaFileAlt" label={t('about.paper')} />}
-            {pub.links.arxiv && <PubLink href={pub.links.arxiv} icon="SiArxiv" label={t('about.arXiv')} />}
+            {pub.links.arxiv && <PubLink href={pub.links.arxiv} icon="SiArxiv" label={t('about.arXiv')} hoverColor="red.400" />}
             {(pub.links.projectPage || pub.links.project) && <PubLink href={pub.links.projectPage || pub.links.project} icon="FaGlobe" label={t('about.project')} hoverColor="purple.400" />}
-            {pub.links.code && <PubLink href={pub.links.code} icon="FaGithub" label={t('about.code')} />}
+            {pub.links.code && <PubLink href={pub.links.code} icon="FaGithub" label={t('about.code')} hoverColor="orange.400" />}
             {pub.links.demo && <PubLink href={pub.links.demo} icon="FaPlay" label={t('about.demo')} />}
             {pub.links.dataset && <PubLink href={pub.links.dataset} icon="FaDatabase" label={t('about.dataset')} />}
-            {pub.links.wechat && (
-              <Link href={pub.links.wechat} isExternal _hover={{ textDecoration: 'none' }}>
-                <HStack spacing={1.5} px={2.5} py={1} borderRadius="sm" border="1px solid"
-                  borderColor={useColorModeValue('yellow.200', 'yellow.700')}
-                  color={useColorModeValue('yellow.700', 'yellow.300')}
-                  bg={useColorModeValue('yellow.50', 'whiteAlpha.50')}
-                  fontSize="xs" fontFamily="mono" transition="all 0.15s"
-                  _hover={{ borderColor: '#07C160', color: '#07C160', bg: useColorModeValue('green.50', 'whiteAlpha.50') }}
-                >
-                  <Text>🆕</Text>
-                  <Text>WeChat</Text>
-                </HStack>
-              </Link>
-            )}
+            {pub.links.wechat && <PubLink href={pub.links.wechat} icon="FaWeixin" label={t('about.wechat')} hoverColor="green.400" />}
             {pub.abstract && (
               <HStack as="button" spacing={1.5} px={2.5} py={1} borderRadius="sm" border="1px solid"
                 borderColor={isAbstractOpen ? useColorModeValue('cyan.300', 'cyan.600') : borderColor}

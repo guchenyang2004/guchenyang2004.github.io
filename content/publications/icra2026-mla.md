@@ -8,6 +8,7 @@ year: 2026
 status: accepted
 isFirstAuthor: false
 isCorrespondingAuthor: false
+tagline: "A multisensory language-action model that integrates multimodal sensing for precise forecasting in robotic manipulation."
 featuredImage: /images/publications/mla.png
 links:
   arxiv: "https://arxiv.org/abs/2509.26642"

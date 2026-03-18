@@ -11,6 +11,7 @@ status: accepted
 isFirstAuthor: true
 isCorrespondingAuthor: false
 specialBadges: ["Co-First"]
+keywords: ["VLA", "双系统", "快速操控", "慢速推理"]
 emoji: "🔥"
 featuredImage: /images/publications/fisvla.png
 links:

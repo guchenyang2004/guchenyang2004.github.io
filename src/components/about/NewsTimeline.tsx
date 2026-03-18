@@ -223,11 +223,24 @@ const NewsTimeline: React.FC<NewsTimelineProps> = ({ news, showHeader: _showHead
       fg: tc.prompt,
       icon: 'FaRocket'
     },
+    award: {
+      bg: isDark ? 'rgba(235, 203, 139, 0.15)' : 'rgba(180, 130, 0, 0.08)',
+      fg: tc.warning,
+      icon: '💪'
+    },
     default: {
       bg: isDark ? 'rgba(163, 190, 140, 0.15)' : 'rgba(54, 128, 90, 0.1)',
       fg: tc.prompt,
       icon: 'FaCode'
     }
+  }
+
+  const renderTypeIcon = (type: string, boxSize: any, color?: string) => {
+    const icon = typeColors[type.toLowerCase()]?.icon || typeColors.default.icon
+    if (/[^\x00-\x7F]/.test(icon)) {
+      return <Text fontSize="sm" lineHeight={1}>{icon}</Text>
+    }
+    return <DynamicIcon name={icon} boxSize={boxSize} color={color} />
   };
   
   // Format the time as HH:MM:SS in the configured timezone
@@ -580,12 +593,7 @@ const NewsTimeline: React.FC<NewsTimelineProps> = ({ news, showHeader: _showHead
                     display="inline-flex"
                     w="fit-content"
                   >
-                    {!isNarrowScreen && (
-                      <DynamicIcon
-                        name={typeColors[item.type.toLowerCase()]?.icon || typeColors.default.icon}
-                        boxSize={[2, 2.5]}
-                      />
-                    )}
+                    {!isNarrowScreen && renderTypeIcon(item.type, [2, 2.5])}
                     {getCategoryLength(item.type)}
                   </Flex>
                 </Box>
@@ -594,8 +602,8 @@ const NewsTimeline: React.FC<NewsTimelineProps> = ({ news, showHeader: _showHead
                   <Flex align="center" gap={1}>
                     {item.badge && (
                       <Text
-                        fontSize={["4xs", "3xs"]}
-                        px={[0.5, 1]}
+                        fontSize={["2xs", "xs"]}
+                        px={[1, 1.5]}
                         borderRadius="sm"
                         bg={typeColors[item.type.toLowerCase()]?.bg || typeColors.default.bg}
                         color={typeColors[item.type.toLowerCase()]?.fg || typeColors.default.fg}
@@ -609,14 +617,34 @@ const NewsTimeline: React.FC<NewsTimelineProps> = ({ news, showHeader: _showHead
                       {isNarrowScreen ? truncateText(item.title, 60) : item.title}
                     </Text>
                   </Flex>
-                  {showDescription && (
+                  {item.papers ? (
+                    <Flex direction="column" gap={0.5} mt={0.5}>
+                      {item.papers.map((paper, pi) => (
+                        <Text key={pi} color={termSecondary} fontSize={["3xs", "2xs"]} isTruncated>
+                          {truncateText(paper.title, isNarrowScreen ? 40 : 70)}
+                        </Text>
+                      ))}
+                    </Flex>
+                  ) : showDescription && (
                     <Text color={termSecondary} fontSize={["3xs", "2xs"]} isTruncated mt={0.5}>
                       {getDescriptionLength(item.description)}
                     </Text>
                   )}
                 </Box>
                 <Flex w={linksColumnWidth} align="center" justify="flex-start" display={isWideEnough ? "flex" : "none"}>
-                  {item.links.length > 0 ? (
+                  {item.papers ? (
+                    <Flex direction="column" gap={0.5}>
+                      {item.papers.map((paper, pi) => (
+                        <HStack key={pi} spacing={1}>
+                          {paper.links.slice(0, 3).map((link, li) => (
+                            <Link key={li} href={link.url} isExternal color={termCommand} _hover={{ color: termHighlight }} onClick={(e) => e.stopPropagation()}>
+                              <Box>[<DynamicIcon name={link.icon || 'FaExternalLinkAlt'} boxSize={[2, 2.5, 3]} />]</Box>
+                            </Link>
+                          ))}
+                        </HStack>
+                      ))}
+                    </Flex>
+                  ) : item.links.length > 0 ? (
                     <HStack spacing={1}>
                       {item.links.slice(0, isSmallScreen ? 2 : 3).map((link, i) => (
                         <Link key={i} href={link.url} isExternal color={termCommand} _hover={{ color: termHighlight }} onClick={(e) => e.stopPropagation()}>
@@ -665,11 +693,7 @@ const NewsTimeline: React.FC<NewsTimelineProps> = ({ news, showHeader: _showHead
                       flexShrink={0}
                       mt={0.5}
                     >
-                      <DynamicIcon
-                        name={typeColors[item.type.toLowerCase()]?.icon || typeColors.default.icon}
-                        boxSize={[3, 4]}
-                        color={typeColors[item.type.toLowerCase()]?.fg || typeColors.default.fg}
-                      />
+                      {renderTypeIcon(item.type, [3, 4], typeColors[item.type.toLowerCase()]?.fg || typeColors.default.fg)}
                     </Box>
                     <Box flex={1} minW={0}>
                       <Text fontSize={["2xs", "xs"]} fontWeight="bold" color={termText} mb={0.5}>
@@ -692,47 +716,72 @@ const NewsTimeline: React.FC<NewsTimelineProps> = ({ news, showHeader: _showHead
                       </Flex>
                     </Box>
                   </Flex>
-                  {item.description && (
-                    <Text
-                      fontSize={["2xs", "xs"]}
-                      color={tc.secondary}
-                      mb={2}
-                      whiteSpace="pre-line"
-                      lineHeight="1.6"
-                      maxH={isVerySmallScreen ? "100px" : isMobile ? "200px" : "none"}
-                      overflowY={isVerySmallScreen || isMobile ? "auto" : "visible"}
-                      sx={(isVerySmallScreen || isMobile) ? {
-                        '&::-webkit-scrollbar': { width: '4px', background: 'transparent' },
-                        '&::-webkit-scrollbar-thumb': { background: tc.border, borderRadius: '2px' },
-                      } : {}}
-                    >
-                      {highlightData(item.description, { num: termHighlight, kw: termCommand, str: termSuccess })}
-                    </Text>
-                  )}
-                  {item.links.length > 0 && (
-                    <Flex wrap="wrap" gap={[1.5, 2]} mt={1}>
-                      {item.links.map((link, i) => (
-                        <Link key={i} href={link.url} isExternal onClick={(e) => e.stopPropagation()} _hover={{ textDecoration: 'none' }}>
-                          <Flex
-                            align="center"
-                            gap={1}
-                            px={[1.5, 2]}
-                            py={[0.5, 1]}
-                            bg={isDark ? 'rgba(136,192,208,0.08)' : 'rgba(42,118,156,0.06)'}
-                            borderRadius="md"
-                            border="1px solid"
-                            borderColor={isDark ? 'rgba(136,192,208,0.2)' : 'rgba(42,118,156,0.15)'}
-                            color={termCommand}
-                            fontSize={["3xs", "2xs"]}
-                            transition="all 0.15s"
-                            _hover={{ bg: isDark ? 'rgba(136,192,208,0.15)' : 'rgba(42,118,156,0.1)', borderColor: termCommand }}
-                          >
-                            <DynamicIcon name={link.icon || 'FaExternalLinkAlt'} boxSize={[2, 2.5]} />
-                            <Text>{getResponsiveTextLength(link.text, isVerySmallScreen, isMobile, isSmallScreen)}</Text>
+                  {item.papers ? (
+                    <Flex direction="column" gap={3} mb={2}>
+                      {item.papers.map((paper, pi) => (
+                        <Box key={pi}>
+                          <Text fontSize={["2xs", "xs"]} color={tc.secondary} mb={1.5} lineHeight="1.6">
+                            {highlightData(paper.title, { num: termHighlight, kw: termCommand, str: termSuccess })}
+                          </Text>
+                          <Flex wrap="wrap" gap={[1.5, 2]}>
+                            {paper.links.map((link, li) => (
+                              <Link key={li} href={link.url} isExternal onClick={(e) => e.stopPropagation()} _hover={{ textDecoration: 'none' }}>
+                                <Flex
+                                  align="center" gap={1} px={[1.5, 2]} py={[0.5, 1]}
+                                  bg={isDark ? 'rgba(136,192,208,0.08)' : 'rgba(42,118,156,0.06)'}
+                                  borderRadius="md" border="1px solid"
+                                  borderColor={isDark ? 'rgba(136,192,208,0.2)' : 'rgba(42,118,156,0.15)'}
+                                  color={termCommand} fontSize={["3xs", "2xs"]} transition="all 0.15s"
+                                  _hover={{ bg: isDark ? 'rgba(136,192,208,0.15)' : 'rgba(42,118,156,0.1)', borderColor: termCommand }}
+                                >
+                                  <DynamicIcon name={link.icon || 'FaExternalLinkAlt'} boxSize={[2, 2.5]} />
+                                  <Text>{getResponsiveTextLength(link.text, isVerySmallScreen, isMobile, isSmallScreen)}</Text>
+                                </Flex>
+                              </Link>
+                            ))}
                           </Flex>
-                        </Link>
+                        </Box>
                       ))}
                     </Flex>
+                  ) : (
+                    <>
+                      {item.description && (
+                        <Text
+                          fontSize={["2xs", "xs"]}
+                          color={tc.secondary}
+                          mb={2}
+                          whiteSpace="pre-line"
+                          lineHeight="1.6"
+                          maxH={isVerySmallScreen ? "100px" : isMobile ? "200px" : "none"}
+                          overflowY={isVerySmallScreen || isMobile ? "auto" : "visible"}
+                          sx={(isVerySmallScreen || isMobile) ? {
+                            '&::-webkit-scrollbar': { width: '4px', background: 'transparent' },
+                            '&::-webkit-scrollbar-thumb': { background: tc.border, borderRadius: '2px' },
+                          } : {}}
+                        >
+                          {highlightData(item.description, { num: termHighlight, kw: termCommand, str: termSuccess })}
+                        </Text>
+                      )}
+                      {item.links.length > 0 && (
+                        <Flex wrap="wrap" gap={[1.5, 2]} mt={1}>
+                          {item.links.map((link, i) => (
+                            <Link key={i} href={link.url} isExternal onClick={(e) => e.stopPropagation()} _hover={{ textDecoration: 'none' }}>
+                              <Flex
+                                align="center" gap={1} px={[1.5, 2]} py={[0.5, 1]}
+                                bg={isDark ? 'rgba(136,192,208,0.08)' : 'rgba(42,118,156,0.06)'}
+                                borderRadius="md" border="1px solid"
+                                borderColor={isDark ? 'rgba(136,192,208,0.2)' : 'rgba(42,118,156,0.15)'}
+                                color={termCommand} fontSize={["3xs", "2xs"]} transition="all 0.15s"
+                                _hover={{ bg: isDark ? 'rgba(136,192,208,0.15)' : 'rgba(42,118,156,0.1)', borderColor: termCommand }}
+                              >
+                                <DynamicIcon name={link.icon || 'FaExternalLinkAlt'} boxSize={[2, 2.5]} />
+                                <Text>{getResponsiveTextLength(link.text, isVerySmallScreen, isMobile, isSmallScreen)}</Text>
+                              </Flex>
+                            </Link>
+                          ))}
+                        </Flex>
+                      )}
+                    </>
                   )}
                 </Box>
               </Collapse>

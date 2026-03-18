@@ -10,6 +10,8 @@ status: accepted
 isFirstAuthor: true
 isCorrespondingAuthor: false
 specialBadges: ["First Author"]
+keywords: ["VLA", "Chain-of-Thought", "Manual Generation", "Robotic Manipulation"]
+tagline: "A unified VLA model that generates chain-of-thought manuals to guide step-by-step robotic manipulation."
 emoji: "🔥"
 featuredImage: /images/publications/manualvla.png
 links:

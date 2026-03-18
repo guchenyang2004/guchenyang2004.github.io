@@ -8,6 +8,7 @@ year: 2026
 status: preprint
 isFirstAuthor: false
 isCorrespondingAuthor: false
+tagline: "Uses a digital twin environment to drive reinforcement learning, enabling safe and efficient real-world robotic manipulation."
 featuredImage: /images/publications/twinrl.png
 links:
   arxiv: "https://arxiv.org/abs/2602.09023"

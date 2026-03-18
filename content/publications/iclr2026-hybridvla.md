@@ -8,6 +8,7 @@ year: 2026
 status: accepted
 isFirstAuthor: false
 isCorrespondingAuthor: false
+tagline: "Collaboratively integrates diffusion-based and autoregressive action generation in a single unified VLA model."
 featuredImage: /images/publications/hybridvla.png
 links:
   arxiv: "https://arxiv.org/abs/2503.10631"
