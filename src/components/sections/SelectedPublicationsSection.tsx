@@ -86,10 +86,10 @@ const PublicationCard = ({ pub }: { pub: any }) => {
                 {pub.keywords && pub.keywords.map((kw: string) => {
                   const k = kw.toLowerCase()
                   const isVLA = k.includes('vla') || k.includes('language-action') || k.includes('language action')
-                  const isManip = k.includes('manipul') || k.includes('robot') || k.includes('fast')
-                  const isReason = k.includes('reason') || k.includes('chain') || k.includes('thought') || k.includes('slow')
-                  const is3D = k.includes('3d') || k.includes('vision') || k.includes('pretrain')
-                  const isSystem = k.includes('dual') || k.includes('system') || k.includes('foundation') || k.includes('world')
+                  const isManip = k.includes('manipul') || k.includes('robot') || k.includes('fast') || kw.includes('操控') || kw.includes('快速')
+                  const isReason = k.includes('reason') || k.includes('chain') || k.includes('thought') || k.includes('slow') || kw.includes('推理') || kw.includes('思维链') || kw.includes('慢速')
+                  const is3D = k.includes('3d') || k.includes('vision') || k.includes('pretrain') || kw.includes('3D') || kw.includes('视觉') || kw.includes('预训练')
+                  const isSystem = k.includes('dual') || k.includes('system') || k.includes('foundation') || k.includes('world') || kw.includes('双系统') || kw.includes('基础') || kw.includes('世界')
                   const [bg, color] = isVLA
                     ? [useColorModeValue('blue.50', 'rgba(99,179,237,0.1)'), useColorModeValue('blue.500', 'blue.300')]
                     : isManip
