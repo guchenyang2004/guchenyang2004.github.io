@@ -2,9 +2,9 @@
   "mcpServers": {
     "termhub": {
       "command": "/opt/homebrew/bin/node",
-      "args": ["/Users/freax/Downloads/gitee/TermHub/mcp-server/dist/index.js"],
+      "args": ["/Volumes/data_mini/Users/gaystarc/Desktop/Github-Backup/guchenyang2004.github.io/mcp-server/src/index.js"],
       "env": {
-        "TERMHUB_ROOT": "/Users/freax/Downloads/gitee/TermHub"
+        "TERMHUB_ROOT": "/Volumes/data_mini/Users/gaystarc/Desktop/Github-Backup/guchenyang2004.github.io"
       }
     }
   }

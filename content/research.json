@@ -1,17 +1,21 @@
 {
   "currentResearch": [
     {
-      "lab": "The Cozy Corner",
-      "emoji": "🛋️",
-      "advisor": "Dr. Warm Lap",
-      "focus": "warmth-seeking behavior and human-proximity optimization",
+      "lab": "Vision-Language-Action Models (VLA)",
+      "emoji": "🤖",
+      "focus": "Designing unified VLA architectures that bridge vision, language understanding, and robotic action execution.",
       "link": "#"
     },
     {
-      "lab": "Lucas & Cookie Play Lab",
-      "emoji": "🐱",
-      "advisor": "Prof. Lucas",
-      "focus": "cross-species play dynamics and cooperative napping",
+      "lab": "Embodied AI & Robotic Manipulation",
+      "emoji": "🦾",
+      "focus": "Building end-to-end embodied AI systems for real-robot deployment, including multimodal perception-control coordination and policy learning.",
+      "link": "#"
+    },
+    {
+      "lab": "3D Vision & Perception",
+      "emoji": "👁️",
+      "focus": "Leveraging 3D representations for robust robotic perception, including lifting 2D pretrained models to 3D and spatial-aware action models.",
       "link": "#"
     }
   ]

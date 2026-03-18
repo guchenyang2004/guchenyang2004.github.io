@@ -1,27 +1,80 @@
 [
   {
-    "title": "最佳搭档奖 — Cookie & Lucas 玩耍大赛",
-    "org": "客厅锦标赛",
-    "date": "Dec 2024",
+    "title": "燕创资本奖学金",
+    "org": "北京大学",
+    "date": "2024-2025",
+    "kind": "scholarship"
+  },
+  {
+    "title": "华泰科技证券奖学金",
+    "org": "北京大学",
+    "date": "2023-2024",
+    "kind": "scholarship"
+  },
+  {
+    "title": "燕创资本奖学金",
+    "org": "北京大学",
+    "date": "2022-2023",
+    "kind": "scholarship"
+  },
+  {
+    "title": "三好学生",
+    "org": "北京大学",
+    "date": "2024-2025",
+    "kind": "honor"
+  },
+  {
+    "title": "三好学生",
+    "org": "北京大学",
+    "date": "2022-2023",
+    "kind": "honor"
+  },
+  {
+    "title": "优秀学生干部",
+    "org": "北京大学",
+    "date": "2023-2024",
+    "kind": "honor"
+  },
+  {
+    "title": "优秀团员",
+    "org": "北京大学",
+    "date": "2023-2024",
+    "kind": "honor"
+  },
+  {
+    "title": "先进班集体",
+    "org": "北京大学",
+    "date": "2022-2023",
+    "kind": "honor"
+  },
+  {
+    "title": "中关村仿生机器人大赛 其他仿生机器人赛道创新优胜奖",
+    "org": "中关村",
+    "date": "2024年12月",
     "kind": "competition"
   },
   {
-    "title": "邻里握手大赛冠军",
-    "org": "狗公园社区",
-    "date": "Apr 2024",
-    "kind": "hackathon"
+    "title": "中关村仿生机器人大赛 人形仿生机器人赛道障碍赛第六名",
+    "org": "中关村",
+    "date": "2024年12月",
+    "kind": "competition"
   },
   {
-    "title": "毛茸茸伙伴奖学金",
-    "org": "国家零食基金会",
-    "date": "Sep 2023",
-    "kind": "scholarship",
-    "link": "#"
+    "title": "全国高中数学联赛（浙江赛区）二等奖",
+    "org": "中国数学会",
+    "date": "2021年10月",
+    "kind": "competition"
   },
   {
-    "title": "最佳撒娇奖（毕业班前 5%）",
-    "org": "温馨小窝学院",
-    "date": "May 2022",
+    "title": "信息科学技术学院团委文体中心主任",
+    "org": "北京大学",
+    "date": "2023-2025",
+    "kind": "honor"
+  },
+  {
+    "title": "信息科学技术学院2022级6班班长",
+    "org": "北京大学",
+    "date": "2022-2023",
     "kind": "honor"
   }
 ]

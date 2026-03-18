@@ -1,58 +1,48 @@
 {
   "_comment": "中文版站点配置",
 
-  "template": "terminal",
-  "components": {},
-  "sections": [
-    "hero", "bio", "newsDisplay", "selectedPublications",
-    "journey", "skills", "mentorship", "talks", "teaching",
-    "accomplishments", "contact", "footer"
-  ],
-
   "name": {
-    "full": "Cookie",
-    "first": "Cookie",
-    "nickname": "Cookie",
-    "last": "",
-    "display": "Cookie",
-    "authorVariants": ["Cookie"]
+    "full": "顾晨阳",
+    "first": "晨阳",
+    "nickname": "GuXiXi",
+    "last": "顾",
+    "display": "顾晨阳",
+    "authorVariants": ["Chenyang Gu", "顾晨阳"]
   },
 
-  "title": "汪！我是 Cookie",
-  "tagline": "一只毛茸茸的博美，靠赖在主人身边写代码，一次握手换一块零食。",
-  "avatar": "cookie.jpg",
+  "title": "你好，我是顾晨阳",
+  "tagline": "北京大学本科生，研究方向为具身智能、VLA模型与机器人操控。",
+  "avatar": "art.JPG",
 
   "terminal": {
-    "username": "cookie",
+    "username": "chenyang",
     "rotatingSubtitles": [
-      "赖在主人身边",
-      "和弟弟 Lucas 玩耍",
-      "握手要零食",
-      "趴下装可怜",
-      "在主人腿上打盹"
+      "研究具身智能",
+      "构建VLA模型",
+      "开发机器人操控",
+      "探索三维视觉",
+      "推动机器人前沿"
     ],
     "skills": [
-      { "name": "握手", "icon": "FaHandshake" },
-      { "name": "趴下", "icon": "FaBed" },
-      { "name": "撒娇", "icon": "FaHeart" },
-      { "name": "跟着主人", "icon": "FaWalking" },
-      { "name": "午睡", "icon": "FaMoon" },
-      { "name": "零食谈判", "icon": "FaCookie" },
-      { "name": "和 Lucas 玩", "icon": "FaCat" },
-      { "name": "卖萌", "icon": "FaStar" }
+      "Python",
+      "PyTorch",
+      "C++",
+      "ROS2",
+      "CUDA",
+      "Docker"
     ],
-    "timezone": "America/Los_Angeles"
+    "timezone": "Asia/Shanghai"
   },
 
   "contact": {
-    "email": "limyoonaxi@gmail.com",
-    "academicEmail": "limyoonaxi@gmail.com",
-    "hiringEmail": "limyoonaxi@gmail.com",
-    "location": "Yaoyao 在哪我在哪"
+    "email": "2200012974@stu.pku.edu.cn",
+    "academicEmail": "2200012974@stu.pku.edu.cn",
+    "hiringEmail": "2200012974@stu.pku.edu.cn",
+    "location": "北京"
   },
 
   "social": {
-    "github": "https://github.com/H-Freax/TermHub",
+    "github": "https://github.com/GayStarc",
     "linkedin": "",
     "medium": "",
     "googleScholar": "",
@@ -66,28 +56,32 @@
 
   "pets": [
     {
-      "name": "Lucas (Lulu)",
+      "name": "蛋挞",
       "emoji": "🐱",
-      "image": "/images/lulu.jpg",
-      "title": "最佳伙伴 & 弟弟",
-      "description": "Cookie 的布偶猫弟弟。他们一起午睡、满屋追逐，还会抢窗边那块阳光最好的位置。"
+      "image": "/images/cat.jpg",
+      "title": "我的第二挚爱",
+      "description": "一只非常非常非常可爱的英短金渐层，2025年6月27日出生。全世界最可爱的小猫咪。"
     }
   ],
 
   "features": {
     "publications": true,
-    "projects": true,
-    "articles": true,
+    "projects": false,
+    "articles": false,
     "experience": true,
     "news": true,
     "pets": true,
-    "guide": true
+    "guide": false
   },
 
   "heroSocialIcons": [
-    { "platform": "twitter", "icon": "SiX", "label": "X", "color": "#000" },
-    { "platform": "youtube", "icon": "FaYoutube", "label": "YouTube", "color": "#FF0000" }
+    {
+      "platform": "github",
+      "icon": "FaGithub",
+      "label": "GitHub",
+      "color": "#333"
+    }
   ],
 
-  "selectedPublicationIds": ["napcon2025-cuddle-optimization", "fetchml2024-warmth-seeking", "arxiv2025-cross-species-play"]
+  "selectedPublicationIds": ["cvpr2026-manualvla", "Neurips2025-FiSVLA", "cvpr2025-lift3d"]
 }

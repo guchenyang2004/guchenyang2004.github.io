@@ -4,38 +4,109 @@
     "badge": "论文发表",
     "icon": "FaFileAlt",
     "iconColor": "blue.400",
-    "title": "撒娇优化论文被 CozyCon 2025 录用",
-    "description": "Cookie 的论文《取暖型博美的最优膝盖占领位置》已被 CozyCon 2025 录用。",
-    "date": "Dec 2025",
-    "sortDate": "2025-12-01",
-    "links": [
-      { "text": "论文", "url": "#", "icon": "FaFilePdf" }
-    ]
+    "title": "ManualVLA 被 CVPR 2026 接收（第一作者）",
+    "description": "ManualVLA：面向思维链手册生成与机器人操控的统一VLA模型。",
+    "date": "2026年2月",
+    "sortDate": "2026-02-01",
+    "links": []
   },
   {
-    "type": "talk",
-    "badge": "受邀报告",
-    "icon": "FaMicrophone",
-    "iconColor": "purple.400",
-    "title": "在国际跨物种玩耍研讨会上受邀演讲",
-    "description": "报告了博美与布偶猫之间的合作玩耍动力学研究成果，以与弟弟 Lucas 的案例为主。",
-    "date": "Mar 2025",
-    "sortDate": "2025-03-10",
-    "links": [
-      { "text": "幻灯片", "url": "#", "icon": "FaDesktop" }
-    ]
+    "type": "publication",
+    "badge": "论文发表",
+    "icon": "FaFileAlt",
+    "iconColor": "blue.400",
+    "title": "HybridVLA 被 ICLR 2026 接收",
+    "description": "HybridVLA：统一视觉语言动作模型中的协作扩散与自回归。",
+    "date": "2026年1月",
+    "sortDate": "2026-01-15",
+    "links": []
   },
   {
-    "type": "release",
-    "badge": "发布",
-    "icon": "FaRocket",
-    "iconColor": "green.400",
-    "title": "PawShake.js v1.0 发布",
-    "description": "发布了 PawShake.js，一个通过握手协议建模零食获取策略的开源库。",
-    "date": "Jul 2024",
-    "sortDate": "2024-07-01",
-    "links": [
-      { "text": "GitHub", "url": "#", "icon": "FaGithub" }
-    ]
+    "type": "publication",
+    "badge": "论文发表",
+    "icon": "FaFileAlt",
+    "iconColor": "blue.400",
+    "title": "MLA 被 ICRA 2026 接收",
+    "description": "MLA：面向机器人操控的多感官语言动作模型。",
+    "date": "2026年1月",
+    "sortDate": "2026-01-10",
+    "links": []
+  },
+  {
+    "type": "publication",
+    "badge": "论文发表",
+    "icon": "FaFileAlt",
+    "iconColor": "blue.400",
+    "title": "Fast-in-Slow 被 NeurIPS 2025 接收（共同第一作者）",
+    "description": "Fast-in-Slow：统一快速操控与慢速推理的双系统基础模型。",
+    "date": "2025年9月",
+    "sortDate": "2025-09-20",
+    "links": []
+  },
+  {
+    "type": "publication",
+    "badge": "论文发表",
+    "icon": "FaFileAlt",
+    "iconColor": "blue.400",
+    "title": "AC-DiT 被 NeurIPS 2025 接收",
+    "description": "AC-DiT：面向移动操控的自适应协调扩散Transformer。",
+    "date": "2025年9月",
+    "sortDate": "2025-09-20",
+    "links": []
+  },
+  {
+    "type": "publication",
+    "badge": "论文发表",
+    "icon": "FaFileAlt",
+    "iconColor": "blue.400",
+    "title": "3DS-VLA 被 CoRL 2025 接收",
+    "description": "3DS-VLA：面向鲁棒多任务操控的三维空间感知视觉语言动作模型。",
+    "date": "2025年7月",
+    "sortDate": "2025-07-01",
+    "links": []
+  },
+  {
+    "type": "publication",
+    "badge": "论文发表",
+    "icon": "FaFileAlt",
+    "iconColor": "blue.400",
+    "title": "RoboMIND 被 RSS 2025 接收",
+    "description": "RoboMIND：面向机器人操控的多形态智能规范数据基准。",
+    "date": "2025年6月",
+    "sortDate": "2025-06-15",
+    "links": []
+  },
+  {
+    "type": "publication",
+    "badge": "论文发表",
+    "icon": "FaFileAlt",
+    "iconColor": "blue.400",
+    "title": "RwoR 被 IROS 2025 接收",
+    "description": "RwoR：从人手采集生成机器人演示用于无机器人策略学习。",
+    "date": "2025年6月",
+    "sortDate": "2025-06-10",
+    "links": []
+  },
+  {
+    "type": "publication",
+    "badge": "论文发表",
+    "icon": "FaFileAlt",
+    "iconColor": "blue.400",
+    "title": "Lift3D 被 CVPR 2025 接收（共同第一作者）",
+    "description": "Lift3D Foundation Policy：提升二维大规模预训练模型以实现鲁棒的三维机器人操控。",
+    "date": "2025年2月",
+    "sortDate": "2025-02-01",
+    "links": []
+  },
+  {
+    "type": "publication",
+    "badge": "论文发表",
+    "icon": "FaFileAlt",
+    "iconColor": "blue.400",
+    "title": "SliceOcc 被 ICRA 2025 接收",
+    "description": "SliceOcc：基于垂直切片表示的室内三维语义占据预测。",
+    "date": "2025年1月",
+    "sortDate": "2025-01-15",
+    "links": []
   }
 ]

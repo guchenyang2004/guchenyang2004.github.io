@@ -2,66 +2,54 @@
   "education": {
     "courses": [
       {
-        "course": "撒娇科学硕士",
-        "institution": "Yaoyao 的膝盖实验室",
-        "year": "2024-2026"
-      },
-      {
-        "course": "乖乖艺术学士",
-        "institution": "温馨小窝",
-        "year": "2020-2024"
+        "course": "信息与计算科学 本科",
+        "institution": "北京大学 信息科学技术学院",
+        "year": "2022-2026"
       }
     ]
   },
-  "reviewing": [
-    { "venue": "国际零食公平会议 2026", "role": "审稿人" },
-    { "venue": "跨物种玩耍动力学研讨会 2025", "role": "审稿人" }
-  ],
   "timeline": [
     {
-      "title": "资深撒娇研究员",
-      "company": "温暖角落",
-      "companyUrl": "#",
-      "location": "Yaoyao 身边",
-      "start": "2024-09-01",
+      "title": "实习生",
+      "company": "北京智源人工智能研究院",
+      "companyUrl": "https://www.baai.ac.cn/",
+      "location": "北京",
+      "start": "2024-11-01",
+      "end": "2025-06-30",
+      "category": "research",
+      "roleType": "research",
+      "summary": "具身多模态大模型研究中心",
+      "highlights": [
+        "多模态具身端到端模型设计与真机落地全栈流程。",
+        "包括桌面垃圾清理、多模态感知-控制协同等任务场景。"
+      ]
+    },
+    {
+      "title": "实习生",
+      "company": "智平方科技",
+      "location": "北京",
+      "start": "2025-06-01",
+      "end": "2025-10-31",
+      "category": "research",
+      "roleType": "research",
+      "summary": "X-Lab",
+      "highlights": [
+        "参与 Fast-in-Slow 项目全栈科研。",
+        "Agilex Aloha、AlphaBot 真机模型落地。"
+      ]
+    },
+    {
+      "title": "实习生",
+      "company": "至简动力",
+      "location": "北京",
+      "start": "2025-10-01",
       "category": "research",
       "roleType": "research",
       "isCurrent": true,
-      "summary": "研究方向：取暖行为优化和人类距离最小化。",
+      "summary": "联合实验室",
       "highlights": [
-        "在居家办公时段实现了 100% 的膝盖占领率。",
-        "发现握手可将零食获取率提升 60%。",
-        "与 Lucas 合著了一篇关于最优阳光共享时间表的论文。"
-      ]
-    },
-    {
-      "title": "初级玩耍伙伴",
-      "company": "Lucas & Cookie 联合公司",
-      "companyUrl": "#",
-      "location": "客厅",
-      "start": "2023-01-15",
-      "end": "2024-05-20",
-      "category": "research",
-      "roleType": "research",
-      "highlights": [
-        "与布偶猫弟弟 Lucas 开发了跨物种玩耍协议。",
-        "优化了追逐翻滚序列，实现最大乐趣与最小家具损伤。",
-        "在年度客厅玩耍大赛中获得最佳搭档奖。"
-      ]
-    },
-    {
-      "title": "零食品鉴实习生",
-      "company": "厨房台面实验室",
-      "companyUrl": "#",
-      "location": "厨房",
-      "start": "2025-06-01",
-      "end": "2025-08-31",
-      "category": "industry",
-      "roleType": "sde",
-      "highlights": [
-        "使用先进的闻一闻尝一尝方法评估了 200+ 种零食。",
-        "将零食浪费率降至 0%（全部样品已消耗）。",
-        "开发了握手换零食流水线，吞吐量提升 3 倍。"
+        "视觉语言动作模型与机器人操控研究。",
+        "ManualVLA：思维链手册生成与机器人操控。"
       ]
     }
   ]

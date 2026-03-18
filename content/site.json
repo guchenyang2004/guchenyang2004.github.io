@@ -11,33 +11,32 @@
     ]
   },
   "title": "Hi there, I'm Chenyang Gu",
+  "tagline": "Undergraduate researcher at Peking University, focusing on embodied AI, VLA models, and robotic manipulation.",
   "avatar": "art.JPG",
   "terminal": {
     "username": "chenyang",
     "rotatingSubtitles": [
-      "build cool projects",
-      "write some code",
-      "explore AI research",
-      "share knowledge",
-      "learn new things"
+      "research embodied AI",
+      "build VLA models",
+      "develop robotic manipulation",
+      "explore 3D vision",
+      "push the frontier of robotics"
     ],
     "skills": [
       "Python",
-      "TypeScript",
-      "Go",
       "PyTorch",
-      "React",
+      "C++",
       "ROS2",
-      "Docker",
-      "Kubernetes"
+      "CUDA",
+      "Docker"
     ],
-    "timezone": "America/Los_Angeles"
+    "timezone": "Asia/Shanghai"
   },
   "contact": {
-    "email": "gcy572092284@stu.pku.edu.cn",
-    "academicEmail": "gcy572092284@stu.pku.edu.cn",
-    "hiringEmail": "gcy572092284@stu.pku.edu.cn",
-    "location": "China"
+    "email": "2200012974@stu.pku.edu.cn",
+    "academicEmail": "2200012974@stu.pku.edu.cn",
+    "hiringEmail": "2200012974@stu.pku.edu.cn",
+    "location": "Beijing, China"
   },
   "social": {
     "github": "https://github.com/GayStarc",
@@ -51,14 +50,22 @@
     "csdn": "",
     "blog": ""
   },
-  "pets": [],
+  "pets": [
+    {
+      "name": "Egg Tart (蛋挞)",
+      "emoji": "🐱",
+      "image": "/images/cat.jpg",
+      "title": "My Second Love",
+      "description": "An incredibly adorable British Shorthair Golden Shaded, born on June 27, 2025. The cutest little companion in the world."
+    }
+  ],
   "features": {
     "publications": true,
-    "projects": true,
-    "articles": true,
+    "projects": false,
+    "articles": false,
     "experience": true,
     "news": true,
-    "pets": false,
+    "pets": true,
     "guide": false
   },
   "heroSocialIcons": [
@@ -67,13 +74,7 @@
       "icon": "FaGithub",
       "label": "GitHub",
       "color": "#333"
-    },
-    {
-      "platform": "linkedin",
-      "icon": "FaLinkedin",
-      "label": "LinkedIn",
-      "color": "#0A66C2"
     }
   ],
-  "selectedPublicationIds": []
+  "selectedPublicationIds": ["cvpr2026-manualvla", "Neurips2025-FiSVLA", "cvpr2025-lift3d"]
 }
