@@ -120,7 +120,7 @@ const NewsTimeline: React.FC<NewsTimelineProps> = ({ news, showHeader: _showHead
   const isVerySmallScreen = useBreakpointValue({ base: true, xs: false });
   const dateColumnWidth = useBreakpointValue({ base: "70px", xs: "75px", sm: "100px", md: "120px" });
   const typeColumnWidth = useBreakpointValue({ base: "60px", xs: "65px", sm: "80px", md: "100px" });
-  const idColumnWidth = useBreakpointValue({ base: "60px", sm: "70px", md: "80px" });
+
   const linksColumnWidth = useBreakpointValue({ base: "80px", sm: "100px", md: "130px" });
   const controlColumnWidth = useBreakpointValue({ base: "30px", sm: "40px", md: "50px" });
   
@@ -533,7 +533,7 @@ const NewsTimeline: React.FC<NewsTimelineProps> = ({ news, showHeader: _showHead
           >
             <Text w={dateColumnWidth} color={termHighlight} isTruncated>{isVerySmallScreen ? t('newsTimeline.time') : t('newsTimeline.timestamp')}</Text>
             <Text w={typeColumnWidth} color={termParam} isTruncated>{isVerySmallScreen ? t('newsTimeline.cat') : t('newsTimeline.category')}</Text>
-            <Text w={idColumnWidth} color={termInfo} display={["none", "none", "block"]}>{t('newsTimeline.pid')}</Text>
+            {/* PID column hidden */}
             <Text flex="1">
               <Box as="span" color={termSuccess}>MEMORY</Box>
               <Box as="span" color={termSecondary}>.</Box>
@@ -589,10 +589,7 @@ const NewsTimeline: React.FC<NewsTimelineProps> = ({ news, showHeader: _showHead
                     {getCategoryLength(item.type)}
                   </Flex>
                 </Box>
-                <Text w={idColumnWidth} color={termInfo} fontFamily="mono" display={isWideEnough ? "block" : "none"}>
-                  <Box as="span" color={termSecondary}>0x</Box>
-                  {index.toString(16).padStart(4, '0')}
-                </Text>
+                {/* PID column hidden */}
                 <Box flex="1">
                   <Flex align="center" gap={1}>
                     {item.badge && (

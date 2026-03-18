@@ -2,6 +2,11 @@
   "education": {
     "courses": [
       {
+        "course": "计算机科学与技术 博士",
+        "institution": "北京大学 计算机学院",
+        "year": "2026-2031"
+      },
+      {
         "course": "信息与计算科学 本科",
         "institution": "北京大学 信息科学技术学院",
         "year": "2022-2026"
@@ -26,13 +31,14 @@
     },
     {
       "title": "实习生",
-      "company": "智平方科技",
+      "company": "智平方",
+      "companyUrl": "https://ai2robotics.com/",
       "location": "北京",
       "start": "2025-06-01",
       "end": "2025-10-31",
       "category": "research",
       "roleType": "research",
-      "summary": "X-Lab",
+      "summary": "X-Lab（AI² Robotics）",
       "highlights": [
         "参与 Fast-in-Slow 项目全栈科研。",
         "Agilex Aloha、AlphaBot 真机模型落地。"
@@ -46,7 +52,7 @@
       "category": "research",
       "roleType": "research",
       "isCurrent": true,
-      "summary": "联合实验室",
+      "summary": "联合实验室（Simplexity Robotics）",
       "highlights": [
         "视觉语言动作模型与机器人操控研究。",
         "ManualVLA：思维链手册生成与机器人操控。"

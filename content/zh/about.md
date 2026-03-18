@@ -11,7 +11,7 @@ journeyPhases:
     description: "多模态具身端到端模型设计与真机落地全栈流程，包括桌面垃圾清理、多模态感知-控制协同等任务场景。"
     tags: [具身多模态大模型]
   - period: "2025年6月 - 2025年10月"
-    title: 智平方科技 
+    title: 智平方
     org: X-Lab 实习生
     description: "参与 Fast-in-Slow 项目全栈科研与 Agilex Aloha、AlphaBot 真机模型落地。"
     tags: [VLA, 快慢系统]
@@ -20,6 +20,24 @@ journeyPhases:
     org: 联合实验室 实习生
     description: ""
     tags: [UWM, 强化学习]
+mentorship:
+  heading: "导师与合作者"
+  mentees:
+    - name: "仉尚航"
+      url: "https://scholar.google.com/citations?user=voqw10cAAAAJ&hl=en"
+      note: "博士导师，北京大学"
+    - name: "刘家铭"
+      url: "https://liujiaming1996.github.io/"
+      note: "科研合作者，北京大学"
+    - name: "陈思翔"
+      url: "https://cscsx.github.io/"
+      note: "科研合作者，北京大学"
+    - name: "刘卓洋"
+      url: "https://zhuoyang-liu.github.io/"
+      note: "科研合作者，北京大学"
+    - name: "陈浩"
+      url: "https://chen-h01.github.io/"
+      note: "科研合作者，香港中文大学"
 version:
   current: v1.0.0
   history:

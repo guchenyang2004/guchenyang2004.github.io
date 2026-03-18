@@ -1,1 +1,11 @@
-{}
+{
+  "PKU HMI Lab": "/images/HMI.jpeg",
+  "Simplexity Robotics": "/images/simplexity.jpg",
+  "Peking University, EECS": "/images/pku.png",
+  "Peking University, School of Computer Science": "/images/pku.png",
+  "北京大学 信息科学技术学院": "/images/pku.png",
+  "北京大学 计算机学院": "/images/pku.png",
+  "北京智源人工智能研究院": "/images/baai.jpeg",
+  "智平方科技": "/images/ai2robotic.jpeg",
+  "至简动力": "/images/simplexity.jpg"
+}

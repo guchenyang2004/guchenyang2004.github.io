@@ -1,22 +1,14 @@
 {
   "currentResearch": [
     {
-      "lab": "视觉语言动作模型（VLA）",
-      "emoji": "🤖",
-      "focus": "设计统一的VLA架构，连接视觉理解、语言推理与机器人动作执行。",
-      "link": "#"
+      "lab": "PKU HMI Lab",
+      "focus": "具身智能架构与模型训练",
+      "link": "https://github.com/PKU-HMI-Lab"
     },
     {
-      "lab": "具身智能与机器人操控",
-      "emoji": "🦾",
-      "focus": "构建面向真机部署的端到端具身智能系统，包括多模态感知-控制协同和策略学习。",
-      "link": "#"
-    },
-    {
-      "lab": "三维视觉与感知",
-      "emoji": "👁️",
-      "focus": "利用三维表示实现鲁棒的机器人感知，包括将二维预训练模型提升至三维和空间感知动作模型。",
-      "link": "#"
+      "lab": "Simplexity Robotics",
+      "focus": "视觉语言动作模型与世界模型",
+      "link": "https://www.xiaohongshu.com/user/profile/698c4a21000000002303e5fb?xsec_token=AB7uprdie3Y9N540cWNCpwAZp6WsFUzb1mHYFnCKinO2M=&xsec_source=pc_note"
     }
   ]
 }

@@ -1,4 +1,4 @@
-import { Box, VStack, Text, useColorModeValue, Image, HStack, Container, Stack, Link, Flex, SimpleGrid, Heading, Tooltip } from '@chakra-ui/react'
+import { Box, VStack, Text, useColorModeValue, Image, HStack, Container, Stack, Link, Flex, SimpleGrid, Heading, Tooltip, Modal, ModalOverlay, ModalContent, ModalBody, ModalCloseButton, useDisclosure, Popover, PopoverTrigger, PopoverContent, PopoverBody, PopoverArrow, Badge } from '@chakra-ui/react'
 import { motion } from 'framer-motion'
 import { withBase } from '@/utils/asset'
 import DynamicIcon from '../DynamicIcon'
@@ -36,6 +36,7 @@ interface HeroSectionProps {
 const HeroSection = ({ title, avatar, research = [], researchLogos = {}, education = [], educationLogos = {} }: HeroSectionProps) => {
   const { t } = useTranslation()
   const { siteOwner, siteConfig } = useLocalizedData()
+  const wechatModal = useDisclosure()
   const headingColor = useColorModeValue('gray.800', 'white')
   const textColor = useColorModeValue('gray.600', 'gray.400')
   const bg = useColorModeValue('gray.50', 'gray.900')
@@ -118,6 +119,22 @@ const HeroSection = ({ title, avatar, research = [], researchLogos = {}, educati
                   {siteOwner.name.display}
                 </MotionText>
               </MotionText>
+              {(() => {
+                const suffix = (siteConfig.title ?? '').split(siteOwner.name.display)[1]
+                return suffix ? (
+                  <MotionText
+                    as="span"
+                    initial={{ opacity: 0 }}
+                    animate={{ opacity: 1 }}
+                    transition={{ duration: 0.3, delay: 1.0 }}
+                    color={headingColor}
+                    fontFamily="mono"
+                    whiteSpace="nowrap"
+                  >
+                    {suffix}
+                  </MotionText>
+                ) : null
+              })()}
             </MotionText>
 
             <HStack
@@ -218,29 +235,9 @@ const HeroSection = ({ title, avatar, research = [], researchLogos = {}, educati
               </SimpleGrid>
             )}
 
-            <Box w="full" borderTop="1px dashed" borderColor={useColorModeValue('gray.200', 'gray.700')} />
-
-            {/* Welcome + contact */}
-            <Flex w="full" direction={['column', 'column', 'row']} align={['center', 'center', 'center']} gap={[2, 2, 4]}>
-              <Text fontSize="xs" color={textColor} lineHeight="tall" textAlign={['center', 'center', 'left']} flex={1} fontStyle="italic">
-                {siteConfig.tagline ?? ''}
-              </Text>
-              <HStack spacing={2} flexShrink={0}>
-                <Link href={`mailto:${siteOwner.contact.academicEmail}`} isExternal _hover={{ textDecoration: 'none' }}>
-                  <HStack spacing={1.5} color={textColor} transition="all 0.15s" _hover={{ color: 'cyan.400' }}>
-                    <DynamicIcon name="FaEnvelope" boxSize={3.5} />
-                    <Text fontSize="xs" fontFamily="mono">email</Text>
-                  </HStack>
-                </Link>
-                <Text color={textColor} opacity={0.2}>/</Text>
-                <Link href={siteOwner.social.linkedin} isExternal _hover={{ textDecoration: 'none' }}>
-                  <HStack spacing={1.5} color={textColor} transition="all 0.15s" _hover={{ color: 'cyan.400' }}>
-                    <DynamicIcon name="FaLinkedin" boxSize={3.5} />
-                    <Text fontSize="xs" fontFamily="mono">linkedin</Text>
-                  </HStack>
-                </Link>
-              </HStack>
-            </Flex>
+            <Text fontSize="xs" color={textColor} lineHeight="tall" textAlign={['center', 'center', 'left']} w="full" fontStyle="italic">
+              {siteConfig.tagline ?? ''}
+            </Text>
           </VStack>
           <MotionBox
             initial={{ opacity: 0, scale: 0.95 }}
@@ -272,22 +269,61 @@ const HeroSection = ({ title, avatar, research = [], researchLogos = {}, educati
                     </Link>
                   </Tooltip>
                 ))}
+                <Tooltip label="Email" fontSize="xs" hasArrow placement="bottom" openDelay={200} fontFamily="mono">
+                  <Link href={`mailto:${siteOwner.contact.academicEmail}`} isExternal _hover={{ textDecoration: 'none' }}>
+                    <Box p={1.5} cursor="pointer" color={textColor} transition="all 0.2s" _hover={{ color: 'cyan.400', transform: 'scale(1.2)' }}>
+                      <DynamicIcon name="FaEnvelope" boxSize={[3, 3.5]} />
+                    </Box>
+                  </Link>
+                </Tooltip>
+                <Tooltip label="WeChat" fontSize="xs" hasArrow placement="bottom" openDelay={200} fontFamily="mono">
+                  <Box as="button" onClick={wechatModal.onOpen} p={1.5} cursor="pointer" transition="all 0.2s" _hover={{ transform: 'scale(1.2)', opacity: 0.8 }}>
+                    <Image src="/images/wechat.png" alt="WeChat" boxSize={[3, 3.5]} objectFit="contain" borderRadius="sm" />
+                  </Box>
+                </Tooltip>
               </HStack>
-              {((siteConfig.pets ?? []) as { name: string; emoji: string; image: string }[]).length > 0 && (
-                <HStack spacing={[4, 5]} justify="center">
-                  {((siteConfig.pets ?? []) as { name: string; emoji: string; image: string }[]).map((pet) => (
-                    <VStack key={pet.name} spacing={2}>
-                      {pet.image && (
-                        <Image
-                          src={pet.image}
-                          alt={pet.name}
-                          borderRadius="full"
-                          boxSize={["40px", "50px"]}
-                          objectFit="cover"
-                        />
+              {((siteConfig.pets ?? []) as { name: string; emoji: string; image: string; title?: string; description?: string }[]).length > 0 && (
+                <HStack spacing={4} justify="center" w="full">
+                  {((siteConfig.pets ?? []) as { name: string; emoji: string; image: string; title?: string; description?: string }[]).map((pet) => (
+                    <Popover key={pet.name} trigger="hover" placement="bottom" openDelay={100} closeDelay={150} isLazy>
+                      <PopoverTrigger>
+                        <VStack spacing={1} cursor="default">
+                          {pet.image ? (
+                            <Image
+                              src={pet.image}
+                              alt={pet.name}
+                              borderRadius="full"
+                              boxSize={["70px", "80px"]}
+                              objectFit="cover"
+                              transition="all 0.2s"
+                              _hover={{ transform: 'scale(1.1)', boxShadow: 'md' }}
+                            />
+                          ) : (
+                            <Flex w={["70px", "80px"]} h={["70px", "80px"]} borderRadius="full" bg={accentBg} align="center" justify="center">
+                              <Text fontSize="2xl">{pet.emoji}</Text>
+                            </Flex>
+                          )}
+                          <Text fontSize="xs" fontWeight="medium">{pet.name} {pet.emoji}</Text>
+                        </VStack>
+                      </PopoverTrigger>
+                      {(pet.title || pet.description) && (
+                        <PopoverContent w="300px" borderRadius="lg" _focus={{ boxShadow: 'none' }}>
+                          <PopoverArrow />
+                          <PopoverBody p={3}>
+                            {pet.title && (
+                              <Badge colorScheme="cyan" mb={2} fontSize="2xs" letterSpacing="wider" fontFamily="mono" display="block">
+                                {pet.title}
+                              </Badge>
+                            )}
+                            {pet.description && (
+                              <Text fontSize="xs" lineHeight="tall" color={textColor} fontFamily="mono">
+                                {pet.description}
+                              </Text>
+                            )}
+                          </PopoverBody>
+                        </PopoverContent>
                       )}
-                      <Text fontSize="sm" fontWeight="medium">{pet.name} {pet.emoji}</Text>
-                    </VStack>
+                    </Popover>
                   ))}
                 </HStack>
               )}
@@ -295,6 +331,17 @@ const HeroSection = ({ title, avatar, research = [], researchLogos = {}, educati
           </MotionBox>
         </Stack>
       </Container>
+
+      {/* WeChat QR Code Modal */}
+      <Modal isOpen={wechatModal.isOpen} onClose={wechatModal.onClose} isCentered size="sm">
+        <ModalOverlay bg="blackAlpha.600" backdropFilter="blur(4px)" />
+        <ModalContent borderRadius="xl" overflow="hidden">
+          <ModalCloseButton zIndex={2} />
+          <ModalBody p={4} display="flex" justifyContent="center">
+            <Image src="/images/wechat.JPG" alt="WeChat QR Code" maxH="400px" objectFit="contain" />
+          </ModalBody>
+        </ModalContent>
+      </Modal>
     </Box>
   )
 }

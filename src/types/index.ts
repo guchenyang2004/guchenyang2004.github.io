@@ -151,6 +151,7 @@ export interface Publication {
     code?: string
     dataset?: string
     demo?: string
+    wechat?: string
   }
   specialBadges?: string[]
   citations?: number

@@ -445,8 +445,8 @@ const PublicationsTerminal: React.FC = () => {
                 >
                   {/* Featured Image Thumbnail */}
                   {pub.featuredImage && !isMobile && (
-                    <Box 
-                      w="320px" 
+                    <Box
+                      w="320px"
                       h="180px"
                       mr={6}
                       flexShrink={0}
@@ -591,6 +591,13 @@ const PublicationsTerminal: React.FC = () => {
                           </Link>
                         </Tooltip>
                       )}
+                      {pub.links.arxiv && (
+                        <Tooltip label="arXiv">
+                          <Link href={pub.links.arxiv} isExternal onClick={(e) => e.stopPropagation()}>
+                            <Badge colorScheme="blue" fontSize="2xs">arXiv</Badge>
+                          </Link>
+                        </Tooltip>
+                      )}
                       {pub.links.code && (
                         <Tooltip label="Code">
                           <Link href={pub.links.code} isExternal onClick={(e) => e.stopPropagation()}>
@@ -598,15 +605,19 @@ const PublicationsTerminal: React.FC = () => {
                           </Link>
                         </Tooltip>
                       )}
-                      {pub.links.projectPage && (
+                      {(pub.links.projectPage || pub.links.project) && (
                         <Tooltip label="Project">
-                          <Link href={pub.links.projectPage} isExternal onClick={(e) => e.stopPropagation()}>
+                          <Link href={pub.links.projectPage || pub.links.project} isExternal onClick={(e) => e.stopPropagation()}>
                             <Badge colorScheme="purple" fontSize="2xs">PROJ</Badge>
                           </Link>
                         </Tooltip>
                       )}
-                      {Object.keys(pub.links).length > 3 && (
-                        <Badge colorScheme="gray" fontSize="2xs">+{Object.keys(pub.links).length - 3}</Badge>
+                      {pub.links.wechat && (
+                        <Tooltip label="WeChat">
+                          <Link href={pub.links.wechat} isExternal onClick={(e) => e.stopPropagation()}>
+                            <Badge colorScheme="yellow" fontSize="2xs">🆕</Badge>
+                          </Link>
+                        </Tooltip>
                       )}
                     </HStack>
                   )}
@@ -673,7 +684,8 @@ const PublicationsTerminal: React.FC = () => {
                                   colorScheme={
                                     key === 'code' ? 'green' :
                                     key === 'paper' || key === 'arxiv' ? 'blue' :
-                                    key === 'projectPage' ? 'purple' :
+                                    key === 'projectPage' || key === 'project' ? 'purple' :
+                                    key === 'wechat' ? 'yellow' :
                                     key === 'demo' ? 'orange' :
                                     key === 'dataset' ? 'teal' :
                                     'gray'
@@ -681,9 +693,11 @@ const PublicationsTerminal: React.FC = () => {
                                   fontSize="xs"
                                   px={2}
                                   py={1}
-                                  textTransform="capitalize"
                                 >
-                                  {key.replace(/([A-Z])/g, ' $1').trim()}
+                                  {key === 'wechat' ? '🆕 WeChat' :
+                                   key === 'projectPage' || key === 'project' ? 'Project' :
+                                   key === 'arxiv' ? 'arXiv' :
+                                   key.replace(/([A-Z])/g, ' $1').trim()}
                                 </Badge>
                               </Link>
                             ))}
@@ -693,8 +707,8 @@ const PublicationsTerminal: React.FC = () => {
                       
                       {/* Right side - Featured Image */}
                       {pub.featuredImage && (
-                        <Box 
-                          w={isMobile ? "full" : "450px"} 
+                        <Box
+                          w={isMobile ? "full" : "450px"}
                           h={isMobile ? "auto" : "300px"}
                           flexShrink={0}
                           order={isMobile ? -1 : 1}

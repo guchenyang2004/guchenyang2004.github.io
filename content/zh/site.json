@@ -10,7 +10,7 @@
     "authorVariants": ["Chenyang Gu", "顾晨阳"]
   },
 
-  "title": "你好，我是顾晨阳",
+  "title": "你好，我是顾晨阳，一名具身智能学习者💪",
   "tagline": "北京大学本科生，研究方向为具身智能、VLA模型与机器人操控。",
   "avatar": "art.JPG",
 
@@ -45,7 +45,7 @@
     "github": "https://github.com/GayStarc",
     "linkedin": "",
     "medium": "",
-    "googleScholar": "",
+    "googleScholar": "https://scholar.google.com/citations?user=liLQ5twAAAAJ&hl=en",
     "twitter": "",
     "youtube": "",
     "bilibili": "",
@@ -60,7 +60,7 @@
       "emoji": "🐱",
       "image": "/images/cat.jpg",
       "title": "我的第二挚爱",
-      "description": "一只非常非常非常可爱的英短金渐层，2025年6月27日出生。全世界最可爱的小猫咪。"
+      "description": "一只非常非常非常可爱的英短金渐层，2025年6月27日出生。金灿灿的软毛、圆圆的大眼睛，最擅长霸占所有温暖的地方。不训练机器人的时候，蛋挞就是我最好的陪伴。"
     }
   ],
 
@@ -80,8 +80,15 @@
       "icon": "FaGithub",
       "label": "GitHub",
       "color": "#333"
+    },
+    {
+      "platform": "googleScholar",
+      "icon": "SiGooglescholar",
+      "label": "Google Scholar",
+      "color": "#4285F4"
     }
   ],
 
-  "selectedPublicationIds": ["cvpr2026-manualvla", "Neurips2025-FiSVLA", "cvpr2025-lift3d"]
+  "selectedPublicationIds": ["cvpr2026-manualvla", "Neurips2025-FiSVLA", "cvpr2025-lift3d"],
+  "sections": ["hero", "bio", "newsDisplay", "selectedPublications", "journey", "mentorship", "talks", "teaching", "accomplishments", "footer"]
 }

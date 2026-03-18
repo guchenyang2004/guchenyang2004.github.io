@@ -1,112 +1,61 @@
 [
   {
     "type": "publication",
-    "badge": "Publication",
-    "icon": "FaFileAlt",
-    "iconColor": "blue.400",
-    "title": "ManualVLA accepted at CVPR 2026 (first author)",
-    "description": "ManualVLA: A Unified VLA Model for Chain-of-Thought Manual Generation and Robotic Manipulation.",
-    "date": "Feb 2026",
+    "badge": "1 Paper",
+    "title": "CVPR 2026",
+    "description": "ManualVLA: A Unified VLA Model for Chain-of-Thought Manual Generation and Robotic Manipulation. (First Author)",
+    "date": "February 2026",
     "sortDate": "2026-02-01",
-    "links": []
+    "links": [
+      { "url": "https://arxiv.org/pdf/2512.02013", "icon": "FaFileAlt", "text": "arXiv" },
+      { "url": "https://sites.google.com/view/maunalvla/", "icon": "FaGlobe", "text": "Project" }
+    ]
   },
   {
     "type": "publication",
-    "badge": "Publication",
-    "icon": "FaFileAlt",
-    "iconColor": "blue.400",
-    "title": "HybridVLA accepted at ICLR 2026",
+    "badge": "1 Paper",
+    "title": "ICLR 2026",
     "description": "HybridVLA: Collaborative Diffusion and Autoregression in a Unified Vision-Language-Action Model.",
-    "date": "Jan 2026",
+    "date": "January 2026",
     "sortDate": "2026-01-15",
+    "links": [
+      { "url": "https://arxiv.org/abs/2503.10631", "icon": "FaFileAlt", "text": "arXiv" },
+      { "url": "https://github.com/PKU-HMI-Lab/Hybrid-VLA", "icon": "FaGithub", "text": "Code" },
+      { "url": "https://hybrid-vla.github.io/", "icon": "FaGlobe", "text": "Project" }
+    ]
+  },
+  {
+    "type": "award",
+    "badge": "Award",
+    "title": "Huanyu Scholarship",
+    "description": "Huanyu Scholarship (¥20,000) — Highest Honor of Peking University EECS.",
+    "date": "December 2025",
+    "sortDate": "2025-12-15",
     "links": []
   },
   {
     "type": "publication",
-    "badge": "Publication",
-    "icon": "FaFileAlt",
-    "iconColor": "blue.400",
-    "title": "MLA accepted at ICRA 2026",
-    "description": "MLA: A Multisensory Language-Action Model for Multimodal Understanding and Forecasting in Robotic Manipulation.",
-    "date": "Jan 2026",
-    "sortDate": "2026-01-10",
-    "links": []
+    "badge": "2 Papers",
+    "title": "NeurIPS 2025",
+    "description": "Fast-in-Slow (FiS-VLA): A Dual-System Foundation Model Unifying Fast Manipulation within Slow Reasoning. (Co-First Author) · AC-DiT: Adaptive Coordination Diffusion Transformer for Mobile Manipulation.",
+    "date": "September 2025",
+    "sortDate": "2025-09-25",
+    "links": [
+      { "url": "https://arxiv.org/pdf/2506.01953", "icon": "FaFileAlt", "text": "FiS-VLA" },
+      { "url": "https://arxiv.org/abs/2507.01961", "icon": "FaFileAlt", "text": "AC-DiT" }
+    ]
   },
   {
     "type": "publication",
-    "badge": "Publication",
-    "icon": "FaFileAlt",
-    "iconColor": "blue.400",
-    "title": "Fast-in-Slow accepted at NeurIPS 2025 (co-first author)",
-    "description": "Fast-in-Slow: A Dual-System Foundation Model Unifying Fast Manipulation within Slow Reasoning.",
-    "date": "Sep 2025",
-    "sortDate": "2025-09-20",
-    "links": []
-  },
-  {
-    "type": "publication",
-    "badge": "Publication",
-    "icon": "FaFileAlt",
-    "iconColor": "blue.400",
-    "title": "AC-DiT accepted at NeurIPS 2025",
-    "description": "AC-DiT: Adaptive Coordination Diffusion Transformer for Mobile Manipulation.",
-    "date": "Sep 2025",
-    "sortDate": "2025-09-20",
-    "links": []
-  },
-  {
-    "type": "publication",
-    "badge": "Publication",
-    "icon": "FaFileAlt",
-    "iconColor": "blue.400",
-    "title": "3DS-VLA accepted at CoRL 2025",
-    "description": "3DS-VLA: A 3D Spatial-Aware Vision Language Action Model for Robust Multi-Task Manipulation.",
-    "date": "Jul 2025",
-    "sortDate": "2025-07-01",
-    "links": []
-  },
-  {
-    "type": "publication",
-    "badge": "Publication",
-    "icon": "FaFileAlt",
-    "iconColor": "blue.400",
-    "title": "RoboMIND accepted at RSS 2025",
-    "description": "RoboMIND: Benchmark on Multi-Embodiment Intelligence Normative Data for Robot Manipulation.",
-    "date": "Jun 2025",
-    "sortDate": "2025-06-15",
-    "links": []
-  },
-  {
-    "type": "publication",
-    "badge": "Publication",
-    "icon": "FaFileAlt",
-    "iconColor": "blue.400",
-    "title": "RwoR accepted at IROS 2025",
-    "description": "RwoR: Generating Robot Demonstrations from Human Hand Collection for Policy Learning without Robot.",
-    "date": "Jun 2025",
-    "sortDate": "2025-06-10",
-    "links": []
-  },
-  {
-    "type": "publication",
-    "badge": "Publication",
-    "icon": "FaFileAlt",
-    "iconColor": "blue.400",
-    "title": "Lift3D accepted at CVPR 2025 (co-first author)",
-    "description": "Lift3D Foundation Policy: Lifting 2D Large-Scale Pretrained Models for Robust 3D Robotic Manipulation.",
-    "date": "Feb 2025",
+    "badge": "1 Paper",
+    "title": "CVPR 2025",
+    "description": "Lift3D Foundation Policy: Lifting 2D Large-Scale Pretrained Models for Robust 3D Robotic Manipulation. (Co-First Author)",
+    "date": "February 2025",
     "sortDate": "2025-02-01",
-    "links": []
-  },
-  {
-    "type": "publication",
-    "badge": "Publication",
-    "icon": "FaFileAlt",
-    "iconColor": "blue.400",
-    "title": "SliceOcc accepted at ICRA 2025",
-    "description": "SliceOcc: Indoor 3D Semantic Occupancy Prediction with Vertical Slice Representation.",
-    "date": "Jan 2025",
-    "sortDate": "2025-01-15",
-    "links": []
+    "links": [
+      { "url": "https://arxiv.org/abs/2411.18623", "icon": "FaFileAlt", "text": "arXiv" },
+      { "url": "https://github.com/PKU-HMI-Lab/LIFT3D", "icon": "FaGithub", "text": "Code" },
+      { "url": "https://lift3d-web.github.io/", "icon": "FaGlobe", "text": "Project" }
+    ]
   }
 ]

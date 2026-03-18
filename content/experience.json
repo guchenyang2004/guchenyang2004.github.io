@@ -2,6 +2,11 @@
   "education": {
     "courses": [
       {
+        "course": "Ph.D. in Computer Science and Technology",
+        "institution": "Peking University, School of Computer Science",
+        "year": "2026-2031"
+      },
+      {
         "course": "B.S. in Information and Computing Science",
         "institution": "Peking University, EECS",
         "year": "2022-2026"
@@ -27,12 +32,13 @@
     {
       "title": "Research Intern",
       "company": "Zhipingfang Tech",
+      "companyUrl": "https://ai2robotics.com/",
       "location": "Beijing, China",
       "start": "2025-06-01",
       "end": "2025-10-31",
       "category": "research",
       "roleType": "research",
-      "summary": "X-Lab",
+      "summary": "X-Lab (AI² Robotics)",
       "highlights": [
         "Full-stack research on the Fast-in-Slow project.",
         "Real-robot model deployment on Agilex Aloha and AlphaBot platforms."
@@ -46,7 +52,7 @@
       "category": "research",
       "roleType": "research",
       "isCurrent": true,
-      "summary": "Joint Laboratory",
+      "summary": "Joint Laboratory (Simplexity Robotics)",
       "highlights": [
         "Research on vision-language-action models and robotic manipulation.",
         "ManualVLA: chain-of-thought manual generation and robotic manipulation."

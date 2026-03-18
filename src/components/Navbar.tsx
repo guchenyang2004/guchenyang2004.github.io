@@ -68,8 +68,9 @@ const Navbar: React.FC = () => {
           transition="opacity 0.15s"
         >
           <Image
-            src={`${import.meta.env.BASE_URL}logo-icon.svg`}
-            alt="TermHub"
+            src={`${import.meta.env.BASE_URL}logo-icon.png`}
+            alt="Chenyang Gu"
+            borderRadius="full"
             h="28px"
             w="28px"
           />

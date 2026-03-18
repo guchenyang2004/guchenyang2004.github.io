@@ -1,112 +1,61 @@
 [
   {
     "type": "publication",
-    "badge": "论文发表",
-    "icon": "FaFileAlt",
-    "iconColor": "blue.400",
-    "title": "ManualVLA 被 CVPR 2026 接收（第一作者）",
-    "description": "ManualVLA：面向思维链手册生成与机器人操控的统一VLA模型。",
+    "badge": "1 篇论文",
+    "title": "CVPR 2026",
+    "description": "ManualVLA：面向思维链手册生成与机器人操控的统一VLA模型。（第一作者）",
     "date": "2026年2月",
     "sortDate": "2026-02-01",
-    "links": []
+    "links": [
+      { "url": "https://arxiv.org/pdf/2512.02013", "icon": "FaFileAlt", "text": "arXiv" },
+      { "url": "https://sites.google.com/view/maunalvla/", "icon": "FaGlobe", "text": "项目主页" }
+    ]
   },
   {
     "type": "publication",
-    "badge": "论文发表",
-    "icon": "FaFileAlt",
-    "iconColor": "blue.400",
-    "title": "HybridVLA 被 ICLR 2026 接收",
+    "badge": "1 篇论文",
+    "title": "ICLR 2026",
     "description": "HybridVLA：统一视觉语言动作模型中的协作扩散与自回归。",
     "date": "2026年1月",
     "sortDate": "2026-01-15",
+    "links": [
+      { "url": "https://arxiv.org/abs/2503.10631", "icon": "FaFileAlt", "text": "arXiv" },
+      { "url": "https://github.com/PKU-HMI-Lab/Hybrid-VLA", "icon": "FaGithub", "text": "代码" },
+      { "url": "https://hybrid-vla.github.io/", "icon": "FaGlobe", "text": "项目主页" }
+    ]
+  },
+  {
+    "type": "award",
+    "badge": "奖项",
+    "title": "环宇奖学金",
+    "description": "环宇奖学金（¥20,000）——北京大学信息科学技术学院最高荣誉。",
+    "date": "2025年12月",
+    "sortDate": "2025-12-15",
     "links": []
   },
   {
     "type": "publication",
-    "badge": "论文发表",
-    "icon": "FaFileAlt",
-    "iconColor": "blue.400",
-    "title": "MLA 被 ICRA 2026 接收",
-    "description": "MLA：面向机器人操控的多感官语言动作模型。",
-    "date": "2026年1月",
-    "sortDate": "2026-01-10",
-    "links": []
-  },
-  {
-    "type": "publication",
-    "badge": "论文发表",
-    "icon": "FaFileAlt",
-    "iconColor": "blue.400",
-    "title": "Fast-in-Slow 被 NeurIPS 2025 接收（共同第一作者）",
-    "description": "Fast-in-Slow：统一快速操控与慢速推理的双系统基础模型。",
+    "badge": "2 篇论文",
+    "title": "NeurIPS 2025",
+    "description": "Fast-in-Slow (FiS-VLA)：统一快速操控与慢速推理的双系统基础模型。（共同第一作者）· AC-DiT：面向移动操控的自适应协调扩散Transformer。",
     "date": "2025年9月",
-    "sortDate": "2025-09-20",
-    "links": []
+    "sortDate": "2025-09-25",
+    "links": [
+      { "url": "https://arxiv.org/pdf/2506.01953", "icon": "FaFileAlt", "text": "FiS-VLA" },
+      { "url": "https://arxiv.org/abs/2507.01961", "icon": "FaFileAlt", "text": "AC-DiT" }
+    ]
   },
   {
     "type": "publication",
-    "badge": "论文发表",
-    "icon": "FaFileAlt",
-    "iconColor": "blue.400",
-    "title": "AC-DiT 被 NeurIPS 2025 接收",
-    "description": "AC-DiT：面向移动操控的自适应协调扩散Transformer。",
-    "date": "2025年9月",
-    "sortDate": "2025-09-20",
-    "links": []
-  },
-  {
-    "type": "publication",
-    "badge": "论文发表",
-    "icon": "FaFileAlt",
-    "iconColor": "blue.400",
-    "title": "3DS-VLA 被 CoRL 2025 接收",
-    "description": "3DS-VLA：面向鲁棒多任务操控的三维空间感知视觉语言动作模型。",
-    "date": "2025年7月",
-    "sortDate": "2025-07-01",
-    "links": []
-  },
-  {
-    "type": "publication",
-    "badge": "论文发表",
-    "icon": "FaFileAlt",
-    "iconColor": "blue.400",
-    "title": "RoboMIND 被 RSS 2025 接收",
-    "description": "RoboMIND：面向机器人操控的多形态智能规范数据基准。",
-    "date": "2025年6月",
-    "sortDate": "2025-06-15",
-    "links": []
-  },
-  {
-    "type": "publication",
-    "badge": "论文发表",
-    "icon": "FaFileAlt",
-    "iconColor": "blue.400",
-    "title": "RwoR 被 IROS 2025 接收",
-    "description": "RwoR：从人手采集生成机器人演示用于无机器人策略学习。",
-    "date": "2025年6月",
-    "sortDate": "2025-06-10",
-    "links": []
-  },
-  {
-    "type": "publication",
-    "badge": "论文发表",
-    "icon": "FaFileAlt",
-    "iconColor": "blue.400",
-    "title": "Lift3D 被 CVPR 2025 接收（共同第一作者）",
-    "description": "Lift3D Foundation Policy：提升二维大规模预训练模型以实现鲁棒的三维机器人操控。",
+    "badge": "1 篇论文",
+    "title": "CVPR 2025",
+    "description": "Lift3D Foundation Policy：提升二维大规模预训练模型以实现鲁棒的三维机器人操控。（共同第一作者）",
     "date": "2025年2月",
     "sortDate": "2025-02-01",
-    "links": []
-  },
-  {
-    "type": "publication",
-    "badge": "论文发表",
-    "icon": "FaFileAlt",
-    "iconColor": "blue.400",
-    "title": "SliceOcc 被 ICRA 2025 接收",
-    "description": "SliceOcc：基于垂直切片表示的室内三维语义占据预测。",
-    "date": "2025年1月",
-    "sortDate": "2025-01-15",
-    "links": []
+    "links": [
+      { "url": "https://arxiv.org/abs/2411.18623", "icon": "FaFileAlt", "text": "arXiv" },
+      { "url": "https://github.com/PKU-HMI-Lab/LIFT3D", "icon": "FaGithub", "text": "代码" },
+      { "url": "https://lift3d-web.github.io/", "icon": "FaGlobe", "text": "项目主页" }
+    ]
   }
 ]

@@ -7,14 +7,14 @@ import { selectedPublicationIds } from '@/site.config'
 import { useLocalizedData } from '@/hooks/useLocalizedData'
 import DynamicIcon from '../DynamicIcon'
 
-const PubLink = ({ href, icon, label }: { href: string; icon: string; label: string }) => (
+const PubLink = ({ href, icon, label, hoverColor }: { href: string; icon: string; label: string; hoverColor?: string }) => (
   <Link href={href} isExternal _hover={{ textDecoration: 'none' }}>
     <HStack
       spacing={1.5} px={2.5} py={1} borderRadius="sm" border="1px solid"
       borderColor={useColorModeValue('gray.200', 'gray.600')}
       color={useColorModeValue('gray.600', 'gray.400')}
       fontSize="xs" fontFamily="mono" transition="all 0.15s"
-      _hover={{ borderColor: 'cyan.400', color: 'cyan.400', bg: useColorModeValue('gray.50', 'whiteAlpha.50') }}
+      _hover={{ borderColor: hoverColor || 'cyan.400', color: hoverColor || 'cyan.400', bg: useColorModeValue('gray.50', 'whiteAlpha.50') }}
     >
       <DynamicIcon name={icon} boxSize={3} />
       <Text>{label}</Text>
@@ -27,6 +27,9 @@ const PublicationCard = ({ pub }: { pub: any }) => {
   const { isOpen: isAbstractOpen, onToggle: onToggleAbstract } = useDisclosure()
   const { isOpen: isImageOpen, onOpen: onImageOpen, onClose: onImageClose } = useDisclosure()
   const borderColor = useColorModeValue('gray.200', 'gray.700')
+  const ownerColor = useColorModeValue('cyan.600', 'cyan.300')
+  const normalAuthorColor = useColorModeValue('gray.500', 'gray.400')
+  const equalContribColor = useColorModeValue('gray.400', 'gray.500')
 
   return (
     <Box p={[4, 5, 6]} bg={useColorModeValue('white', 'gray.800')} borderRadius="md" border="1px solid" borderColor={borderColor} transition="all 0.2s" _hover={{ borderColor: useColorModeValue('cyan.300', 'cyan.600') }}>
@@ -37,7 +40,7 @@ const PublicationCard = ({ pub }: { pub: any }) => {
             onKeyDown={(e: React.KeyboardEvent) => { if (e.key === 'Enter' || e.key === ' ') { e.preventDefault(); onImageOpen() } }}
             cursor="zoom-in" overflow="hidden" borderRadius="sm"
           >
-            <Image src={pub.featuredImage} alt={pub.title} w="full" h="full" objectFit="contain" bg={useColorModeValue('gray.50', 'gray.900')} p={1} transition="transform 0.3s" _hover={{ transform: 'scale(1.03)' }} />
+            <Image src={pub.featuredImage} alt={pub.title} w="full" h="full" objectFit="contain" transition="transform 0.3s" _hover={{ transform: 'scale(1.03)' }} />
           </Box>
         )}
         <VStack align="start" spacing={2.5} flex={1} justify="center">
@@ -50,26 +53,38 @@ const PublicationCard = ({ pub }: { pub: any }) => {
           </HStack>
           <Heading size="sm" lineHeight="tall" fontWeight="semibold" color={useColorModeValue('gray.800', 'gray.100')}>{pub.title}</Heading>
           <VStack align="start" spacing={1.5} w="full">
-            <Text fontSize="xs" color={useColorModeValue('gray.500', 'gray.400')} lineHeight="base" noOfLines={2}>
+            <Text fontSize="xs" lineHeight="base" noOfLines={2}>
               {pub.authors.map((author: string, idx: number) => {
-                const isHighlighted = pub.isCoFirst && pub.coFirstAuthors?.includes(author)
+                const cleanName = author.replace(/\*/g, '').trim()
+                const isOwner = cleanName === 'Chenyang Gu'
+                const isCoFirstAuthor = pub.isCoFirst && pub.coFirstAuthors?.includes(cleanName)
+                const hasStarInName = author.includes('*')
                 return (
-                  <Text as="span" key={idx} fontWeight={isHighlighted ? 'semibold' : 'normal'} color={isHighlighted ? useColorModeValue('gray.700', 'gray.200') : undefined}>
-                    {author}{isHighlighted && <Text as="sup" fontSize="2xs" color="cyan.400">*</Text>}{idx < pub.authors.length - 1 && ', '}
+                  <Text as="span" key={idx}
+                    fontWeight={isOwner || isCoFirstAuthor ? 'semibold' : 'normal'}
+                    color={isOwner ? ownerColor : normalAuthorColor}
+                  >
+                    {author}
+                    {isCoFirstAuthor && !hasStarInName && <Text as="sup" fontSize="2xs" color="cyan.400">*</Text>}
+                    {idx < pub.authors.length - 1 && ', '}
                   </Text>
                 )
               })}
             </Text>
             {pub.specialBadges && pub.specialBadges.length > 0 && (
-              <HStack spacing={1.5} flexWrap="wrap">
+              <HStack spacing={1.5} flexWrap="wrap" align="center">
                 {pub.specialBadges.map((badge: string) => (
                   <Text key={badge} fontSize="2xs" fontFamily="mono" px={2} py={0.5} borderRadius="sm" border="1px solid"
-                    borderColor={badge === 'First Author' || badge === 'Co-First' ? useColorModeValue('cyan.200', 'cyan.700') : badge === 'Oral' || badge === 'Spotlight' || badge === 'Best Paper' ? useColorModeValue('orange.200', 'orange.700') : useColorModeValue('gray.200', 'gray.600')}
+                    borderColor={badge === 'First Author' || badge === 'Co-First' ? useColorModeValue('cyan.300', 'cyan.600') : badge === 'Oral' || badge === 'Spotlight' || badge === 'Best Paper' ? useColorModeValue('orange.200', 'orange.700') : useColorModeValue('gray.200', 'gray.600')}
                     color={badge === 'First Author' || badge === 'Co-First' ? useColorModeValue('cyan.600', 'cyan.300') : badge === 'Oral' || badge === 'Spotlight' || badge === 'Best Paper' ? useColorModeValue('orange.600', 'orange.300') : useColorModeValue('gray.500', 'gray.400')}
                     bg={badge === 'First Author' || badge === 'Co-First' ? useColorModeValue('cyan.50', 'whiteAlpha.50') : badge === 'Oral' || badge === 'Spotlight' || badge === 'Best Paper' ? useColorModeValue('orange.50', 'whiteAlpha.50') : 'transparent'}
                   >{badge}</Text>
                 ))}
-                {pub.isCoFirst && <Text fontSize="2xs" color={useColorModeValue('gray.400', 'gray.500')} fontStyle="italic">{t('about.equalContribution')}</Text>}
+                {pub.isCoFirst && (
+                  <Text fontSize="2xs" color={equalContribColor} fontStyle="italic">
+                    {t('about.equalContribution')}
+                  </Text>
+                )}
               </HStack>
             )}
           </VStack>
@@ -77,10 +92,24 @@ const PublicationCard = ({ pub }: { pub: any }) => {
           <HStack spacing={1.5} flexWrap="wrap">
             {pub.links.paper && <PubLink href={pub.links.paper} icon="FaFileAlt" label={t('about.paper')} />}
             {pub.links.arxiv && <PubLink href={pub.links.arxiv} icon="SiArxiv" label={t('about.arXiv')} />}
-            {pub.links.projectPage && <PubLink href={pub.links.projectPage} icon="FaGlobe" label={t('about.project')} />}
+            {(pub.links.projectPage || pub.links.project) && <PubLink href={pub.links.projectPage || pub.links.project} icon="FaGlobe" label={t('about.project')} hoverColor="purple.400" />}
             {pub.links.code && <PubLink href={pub.links.code} icon="FaGithub" label={t('about.code')} />}
             {pub.links.demo && <PubLink href={pub.links.demo} icon="FaPlay" label={t('about.demo')} />}
             {pub.links.dataset && <PubLink href={pub.links.dataset} icon="FaDatabase" label={t('about.dataset')} />}
+            {pub.links.wechat && (
+              <Link href={pub.links.wechat} isExternal _hover={{ textDecoration: 'none' }}>
+                <HStack spacing={1.5} px={2.5} py={1} borderRadius="sm" border="1px solid"
+                  borderColor={useColorModeValue('yellow.200', 'yellow.700')}
+                  color={useColorModeValue('yellow.700', 'yellow.300')}
+                  bg={useColorModeValue('yellow.50', 'whiteAlpha.50')}
+                  fontSize="xs" fontFamily="mono" transition="all 0.15s"
+                  _hover={{ borderColor: '#07C160', color: '#07C160', bg: useColorModeValue('green.50', 'whiteAlpha.50') }}
+                >
+                  <Text>🆕</Text>
+                  <Text>WeChat</Text>
+                </HStack>
+              </Link>
+            )}
             {pub.abstract && (
               <HStack as="button" spacing={1.5} px={2.5} py={1} borderRadius="sm" border="1px solid"
                 borderColor={isAbstractOpen ? useColorModeValue('cyan.300', 'cyan.600') : borderColor}
@@ -127,7 +156,9 @@ const SelectedPublicationsSection: React.FC = () => {
   const { publications } = useLocalizedData()
 
   const selectedPubs = useMemo(
-    () => publications.filter((pub) => selectedPublicationIds.has(pub.id)),
+    () => publications
+      .filter((pub) => selectedPublicationIds.has(pub.id))
+      .sort((a, b) => b.year - a.year),
     [publications]
   )
 

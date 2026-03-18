@@ -10,7 +10,7 @@
       "Chenyang Gu"
     ]
   },
-  "title": "Hi there, I'm Chenyang Gu",
+  "title": "Hi there, I'm Chenyang Gu, an Embodied AI Learner💪",
   "tagline": "Undergraduate researcher at Peking University, focusing on embodied AI, VLA models, and robotic manipulation.",
   "avatar": "art.JPG",
   "terminal": {
@@ -25,24 +25,24 @@
     "skills": [
       "Python",
       "PyTorch",
+      "Jax",
       "C++",
-      "ROS2",
-      "CUDA",
-      "Docker"
+      "ROS/ROS2",
+      "CUDA"
     ],
     "timezone": "Asia/Shanghai"
   },
   "contact": {
-    "email": "2200012974@stu.pku.edu.cn",
-    "academicEmail": "2200012974@stu.pku.edu.cn",
-    "hiringEmail": "2200012974@stu.pku.edu.cn",
+    "email": "gcy572092284@stu.pku.edu.cn",
+    "academicEmail": "gcy572092284@stu.pku.edu.cn",
+    "hiringEmail": "gcy572092284@gmail.com",
     "location": "Beijing, China"
   },
   "social": {
     "github": "https://github.com/GayStarc",
     "linkedin": "",
     "medium": "",
-    "googleScholar": "",
+    "googleScholar": "https://scholar.google.com/citations?user=liLQ5twAAAAJ&hl=en",
     "twitter": "",
     "youtube": "",
     "bilibili": "",
@@ -52,11 +52,11 @@
   },
   "pets": [
     {
-      "name": "Egg Tart (蛋挞)",
+      "name": "Egg Tart",
       "emoji": "🐱",
       "image": "/images/cat.jpg",
-      "title": "My Second Love",
-      "description": "An incredibly adorable British Shorthair Golden Shaded, born on June 27, 2025. The cutest little companion in the world."
+      "title": "Passionate Code Engineer",
+      "description": "A British Shorthair Golden Shaded born on June 27, 2025. Egg Tart is ridiculously adorable — soft golden fur, big round eyes, and a talent for stealing the warmest spot on any surface. When I'm not training robots, she's my favorite companion."
     }
   ],
   "features": {
@@ -74,7 +74,14 @@
       "icon": "FaGithub",
       "label": "GitHub",
       "color": "#333"
+    },
+    {
+      "platform": "googleScholar",
+      "icon": "SiGooglescholar",
+      "label": "Google Scholar",
+      "color": "#4285F4"
     }
   ],
-  "selectedPublicationIds": ["cvpr2026-manualvla", "Neurips2025-FiSVLA", "cvpr2025-lift3d"]
+  "selectedPublicationIds": ["cvpr2026-manualvla", "Neurips2025-FiSVLA", "cvpr2025-lift3d"],
+  "sections": ["hero", "bio", "newsDisplay", "selectedPublications", "journey", "mentorship", "talks", "teaching", "accomplishments", "footer"]
 }

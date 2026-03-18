@@ -1,80 +1,50 @@
 [
   {
-    "title": "Yanchuang Capital Scholarship",
-    "org": "Peking University",
-    "date": "2024-2025",
+    "title": "🏆 Huanyu Scholarship (¥20,000) — Highest Honor of Peking University EECS",
+    "org": "Peking University, EECS",
+    "date": "2025.12",
     "kind": "scholarship"
   },
   {
-    "title": "Huatai Securities Scholarship",
-    "org": "Peking University",
-    "date": "2023-2024",
+    "title": "🥇 \"Xiaomi Cup\" Academic Rising Star Nomination",
+    "org": "Peking University, School of Computer Science",
+    "date": "2025.12",
     "kind": "scholarship"
   },
   {
-    "title": "Yanchuang Capital Scholarship",
+    "title": "🔥 Yanchuang Capital Scholarship (¥10,000) & Merit Student (top 10%)",
     "org": "Peking University",
-    "date": "2022-2023",
+    "date": "2025.12",
     "kind": "scholarship"
   },
   {
-    "title": "Merit Student",
+    "title": "🔥 Huatai Securities Scholarship (¥10,000) & Outstanding Student Leader (top 5%) & Outstanding League Member",
     "org": "Peking University",
-    "date": "2024-2025",
+    "date": "2024.12",
+    "kind": "scholarship"
+  },
+  {
+    "title": "🔥 Yanchuang Capital Scholarship (¥8,000) & Merit Student (top 10%) & Advanced Class Collective (top 10%)",
+    "org": "Peking University",
+    "date": "2023.12",
+    "kind": "scholarship"
+  },
+  {
+    "title": "🎓️ Director, Cultural & Sports Center, EECS Youth League",
+    "org": "Peking University",
+    "date": "2024.09-2025.09",
     "kind": "honor"
   },
   {
-    "title": "Merit Student",
-    "org": "Peking University",
-    "date": "2022-2023",
-    "kind": "honor"
-  },
-  {
-    "title": "Outstanding Student Leader",
-    "org": "Peking University",
-    "date": "2023-2024",
-    "kind": "honor"
-  },
-  {
-    "title": "Outstanding League Member",
-    "org": "Peking University",
-    "date": "2023-2024",
-    "kind": "honor"
-  },
-  {
-    "title": "Advanced Class Collective",
-    "org": "Peking University",
-    "date": "2022-2023",
-    "kind": "honor"
-  },
-  {
-    "title": "Innovation Excellence Award, Biomimetic Robot Competition",
+    "title": "🥇 Innovation Excellence Award, Other Biomimetic Robot Track",
     "org": "Zhongguancun",
     "date": "Dec 2024",
     "kind": "competition"
   },
   {
-    "title": "6th Place, Humanoid Robot Obstacle Race",
+    "title": "🥉 6th Place, Humanoid Robot Obstacle Race",
     "org": "Zhongguancun",
     "date": "Dec 2024",
     "kind": "competition"
-  },
-  {
-    "title": "Second Prize, National HS Math Competition (Zhejiang)",
-    "org": "Chinese Mathematical Society",
-    "date": "Oct 2021",
-    "kind": "competition"
-  },
-  {
-    "title": "Director, Cultural & Sports Center, EECS Youth League",
-    "org": "Peking University",
-    "date": "2023-2025",
-    "kind": "honor"
-  },
-  {
-    "title": "Class Monitor, EECS Class 6 of 2022",
-    "org": "Peking University",
-    "date": "2022-2023",
-    "kind": "honor"
   }
 ]
