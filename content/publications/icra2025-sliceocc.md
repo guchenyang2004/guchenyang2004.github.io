@@ -1,7 +1,7 @@
 ---
 id: icra2025-sliceocc
 title: "SliceOcc: Indoor 3D Semantic Occupancy Prediction with Vertical Slice Representation"
-authors: [Jiaming Liu, Hao Chen, Chenyang Gu, Shanghang Zhang]
+authors: [Jianing Li, Ming Lu, Hao Wang, Chenyang Gu, Wenzhao Zheng, Li Du, Shanghang Zhang]
 venue: ICRA
 venueType: conference
 year: 2025

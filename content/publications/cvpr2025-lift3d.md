@@ -1,7 +1,7 @@
 ---
 id: cvpr2025-lift3d
 title: "Lift3D Foundation Policy: Lifting 2D Large-Scale Pretrained Models for Robust 3D Robotic Manipulation"
-authors: [Yueru Jia, Jiaming Liu, Sixiang Chen, Chenyang Gu, Zhilue Wang, Longzan Luo, Lily Lee, Pengwei Wang, Zhongyuan Wang, Renrui Zhang, Shanghang Zhang]
+authors: [Yueru Jia*, Jiaming Liu*, Sixiang Chen*, Chenyang Gu*, Zhilue Wang, Longzan Luo, Lily Lee, Pengwei Wang, Zhongyuan Wang, Renrui Zhang, Shanghang Zhang]
 isCoFirst: true
 coFirstAuthors: [Yueru Jia, Jiaming Liu, Sixiang Chen, Chenyang Gu]
 venue: CVPR
