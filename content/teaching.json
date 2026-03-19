@@ -1,1 +1,10 @@
-[]
+[
+  {
+    "course": "Introduction to Computer Systems",
+    "institution": "Peking University",
+    "role": "ta",
+    "semester": "2025.09 – 2026.02",
+    "description": "Class teaching, lecture sessions, and exam supervision.",
+    "logo": "/images/pku.png"
+  }
+]

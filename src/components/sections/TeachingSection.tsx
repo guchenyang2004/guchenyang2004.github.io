@@ -1,4 +1,4 @@
-import { Box, Container, VStack, HStack, Text, Heading, Flex, Link, useColorModeValue } from '@chakra-ui/react'
+import { Box, Container, VStack, HStack, Text, Heading, Flex, Link, Image, useColorModeValue } from '@chakra-ui/react'
 import { useTranslation } from 'react-i18next'
 import { useLocalizedData } from '@/hooks/useLocalizedData'
 import DynamicIcon from '../DynamicIcon'
@@ -32,8 +32,14 @@ const TeachingSection: React.FC = () => {
         <VStack spacing={0} align="stretch">
           {teaching.map((entry, i) => (
             <Flex key={i} align="start" gap={3} py={2.5} borderBottom="1px solid" borderColor={borderColor}>
-              <Box mt="2px" flexShrink={0}>
-                <DynamicIcon name={roleIcons[entry.role] || roleIcons.other} boxSize={3.5} color="cyan.400" />
+              <Box flexShrink={0}>
+                {entry.logo ? (
+                  <Image src={entry.logo} alt={entry.institution} boxSize="20px" objectFit="contain" borderRadius="sm" />
+                ) : (
+                  <Box mt="2px">
+                    <DynamicIcon name={roleIcons[entry.role] || roleIcons.other} boxSize={3.5} color="cyan.400" />
+                  </Box>
+                )}
               </Box>
               <Box flex={1} minW={0}>
                 <Text fontSize="xs" fontWeight="medium" color={titleColor} lineHeight="short">

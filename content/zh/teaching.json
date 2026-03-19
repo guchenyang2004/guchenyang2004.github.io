@@ -1,1 +1,10 @@
-[]
+[
+  {
+    "course": "计算机系统导论",
+    "institution": "北京大学",
+    "role": "ta",
+    "semester": "2025.09 – 2026.02",
+    "description": "课程助教，负责课堂教学、讲解及考试监督等。",
+    "logo": "/images/pku.png"
+  }
+]

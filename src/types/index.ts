@@ -194,6 +194,7 @@ export interface TeachingEntry {
   role: 'instructor' | 'ta' | 'guest-lecturer' | 'co-instructor' | 'other'
   description?: string
   link?: string
+  logo?: string
 }
 
 export interface Skill {
