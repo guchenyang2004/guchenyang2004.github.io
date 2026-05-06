@@ -1,9 +1,9 @@
 [
   {
     "type": "publication",
-    "badge": "1 篇论文",
+    "badge": "Spotlight",
     "title": "🎉 ICML 2026",
-    "description": "LaST₀：面向机器人视觉语言动作模型的潜在时空思维链。",
+    "description": "LaST₀：面向机器人视觉语言动作模型的潜在时空思维链。（Spotlight）",
     "date": "2026年5月",
     "sortDate": "2026-05-01",
     "links": [

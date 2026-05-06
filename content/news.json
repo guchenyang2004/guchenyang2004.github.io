@@ -1,9 +1,9 @@
 [
   {
     "type": "publication",
-    "badge": "1 Paper",
+    "badge": "Spotlight",
     "title": "🎉 ICML 2026",
-    "description": "LaST₀: Latent Spatio-Temporal Chain-of-Thought for Robotic Vision-Language-Action Model.",
+    "description": "LaST₀: Latent Spatio-Temporal Chain-of-Thought for Robotic Vision-Language-Action Model. (Spotlight)",
     "date": "May 2026",
     "sortDate": "2026-05-01",
     "links": [
