@@ -1,11 +1,11 @@
 ---
-id: arxiv2026-last0
+id: icml2026-last0
 title: "LaST₀: Latent Spatio-Temporal Chain-of-Thought for Robotic Vision-Language-Action Model"
 authors: [Zhuoyang Liu, Jiaming Liu, Hao Chen, Jiale Yu, Ziyu Guo, Chengkai Hou, Chenyang Gu, Xiangju Mi, Renrui Zhang, Kun Wu, Zhengping Che, Jian Tang, Pheng-Ann Heng, Shanghang Zhang]
-venue: arXiv
-venueType: preprint
+venue: ICML
+venueType: conference
 year: 2026
-status: preprint
+status: spotlight
 isFirstAuthor: false
 isCorrespondingAuthor: false
 featuredImage: /images/publications/last0.png

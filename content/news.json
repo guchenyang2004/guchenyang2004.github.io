@@ -2,6 +2,19 @@
   {
     "type": "publication",
     "badge": "1 Paper",
+    "title": "🎉 ICML 2026",
+    "description": "LaST₀: Latent Spatio-Temporal Chain-of-Thought for Robotic Vision-Language-Action Model.",
+    "date": "May 2026",
+    "sortDate": "2026-05-01",
+    "links": [
+      { "url": "https://arxiv.org/abs/2601.05248", "icon": "FaFileAlt", "text": "arXiv" },
+      { "url": "https://github.com/ZhuoyangLiu2005/last0", "icon": "FaGithub", "text": "Code" },
+      { "url": "https://vla-last0.github.io/", "icon": "FaGlobe", "text": "Project" }
+    ]
+  },
+  {
+    "type": "publication",
+    "badge": "1 Paper",
     "title": "🎉 CVPR 2026",
     "description": "ManualVLA: A Unified VLA Model for Chain-of-Thought Manual Generation and Robotic Manipulation. (First Author)",
     "date": "February 2026",

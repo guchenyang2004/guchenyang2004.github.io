@@ -2,6 +2,19 @@
   {
     "type": "publication",
     "badge": "1 篇论文",
+    "title": "🎉 ICML 2026",
+    "description": "LaST₀：面向机器人视觉语言动作模型的潜在时空思维链。",
+    "date": "2026年5月",
+    "sortDate": "2026-05-01",
+    "links": [
+      { "url": "https://arxiv.org/abs/2601.05248", "icon": "FaFileAlt", "text": "arXiv" },
+      { "url": "https://github.com/ZhuoyangLiu2005/last0", "icon": "FaGithub", "text": "代码" },
+      { "url": "https://vla-last0.github.io/", "icon": "FaGlobe", "text": "项目主页" }
+    ]
+  },
+  {
+    "type": "publication",
+    "badge": "1 篇论文",
     "title": "🎉 CVPR 2026",
     "description": "ManualVLA：面向思维链手册生成与机器人操控的统一VLA模型。（第一作者）",
     "date": "2026年2月",
