@@ -5,6 +5,7 @@ authors: [Jiaming Liu, Hao Chen, Chenyang Gu, Shanghang Zhang]
 venue: ICRA
 venueType: conference
 year: 2025
+acceptanceDate: "2025-01-31"
 status: accepted
 isFirstAuthor: false
 isCorrespondingAuthor: false

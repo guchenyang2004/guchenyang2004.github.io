@@ -5,6 +5,7 @@ authors: [Zhuoyang Liu, Jiaming Liu, Jiadong Xu, Nuowei Han, Chenyang Gu, Hao Ch
 venue: ICRA
 venueType: conference
 year: 2026
+acceptanceDate: "2026-01-31"
 status: accepted
 isFirstAuthor: false
 isCorrespondingAuthor: false

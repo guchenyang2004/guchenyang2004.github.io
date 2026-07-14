@@ -8,6 +8,7 @@ venue: CVPR
 venueType: conference
 year: 2025
 month: "02"
+acceptanceDate: "2025-02-26"
 status: accepted
 isFirstAuthor: true
 isCorrespondingAuthor: false

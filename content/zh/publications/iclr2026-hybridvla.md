@@ -5,6 +5,7 @@ authors: [Jiaming Liu, Hao Chen, Zhuoyang Liu, Pengju An, Renrui Zhang, Chenyang
 venue: ICLR
 venueType: conference
 year: 2026
+acceptanceDate: "2026-01-25"
 status: accepted
 isFirstAuthor: false
 isCorrespondingAuthor: false

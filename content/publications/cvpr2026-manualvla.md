@@ -6,6 +6,7 @@ coFirstAuthors: [Chenyang Gu, Jiaming Liu, Hao Chen, Runzhong Huang]
 venue: CVPR
 venueType: conference
 year: 2026
+acceptanceDate: "2026-02-20"
 status: accepted
 isFirstAuthor: true
 isCoFirst: true

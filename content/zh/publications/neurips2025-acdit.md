@@ -5,6 +5,7 @@ authors: [Sixiang Chen, Jiaming Liu, Siyuan Qian, Han Jiang, Lily Li, Renrui Zha
 venue: NeurIPS
 venueType: conference
 year: 2025
+acceptanceDate: "2025-09-18"
 status: accepted
 isFirstAuthor: false
 isCorrespondingAuthor: false

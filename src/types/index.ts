@@ -142,7 +142,9 @@ export interface Publication {
   venueType: 'conference' | 'workshop' | 'demo' | 'preprint'
   year: number
   month?: string
-  status: 'accepted' | 'published' | 'preprint'
+  acceptanceDate?: string
+  preprintDate?: string
+  status: 'accepted' | 'published' | 'preprint' | 'spotlight'
   abstract?: string
   tagline?: string
   keywords?: string[]

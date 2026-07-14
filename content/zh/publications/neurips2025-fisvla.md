@@ -7,6 +7,7 @@ coFirstAuthors: [Hao Chen, Jiaming Liu, Chenyang Gu, Zhuoyang Liu]
 venue: NeurIPS
 venueType: conference
 year: 2025
+acceptanceDate: "2025-09-18"
 status: accepted
 isFirstAuthor: true
 isCorrespondingAuthor: false

@@ -5,6 +5,7 @@ authors: [Zhuoyang Liu, Jiaming Liu, Hao Chen, Jiale Yu, Ziyu Guo, Chengkai Hou,
 venue: ICML
 venueType: conference
 year: 2026
+acceptanceDate: "2026-04-30"
 status: spotlight
 isFirstAuthor: false
 isCorrespondingAuthor: false

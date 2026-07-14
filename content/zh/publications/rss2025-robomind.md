@@ -5,6 +5,7 @@ authors: [Kun Wu, Chengkai Hou, Jiaming Liu, Zhengping Che, Xiaozhu Ju, Zhuqin Y
 venue: RSS
 venueType: conference
 year: 2025
+acceptanceDate: "2025-04-15"
 status: accepted
 isFirstAuthor: false
 isCorrespondingAuthor: false

@@ -5,6 +5,7 @@ import { useMemo } from 'react'
 import { useTranslation } from 'react-i18next'
 import { selectedPublicationIds } from '@/site.config'
 import { useLocalizedData } from '@/hooks/useLocalizedData'
+import { sortPublications } from '@/utils/publicationSort'
 import DynamicIcon from '../DynamicIcon'
 
 const PubLink = ({ href, icon, label, hoverColor }: { href: string; icon: string; label: string; hoverColor?: string }) => (
@@ -167,11 +168,7 @@ const SelectedPublicationsSection: React.FC = () => {
   const selectedPubs = useMemo(
     () => publications
       .filter((pub) => selectedPublicationIds.has(pub.id))
-      .sort((a, b) => {
-        const aVal = a.year * 100 + parseInt(a.month ?? '0')
-        const bVal = b.year * 100 + parseInt(b.month ?? '0')
-        return bVal - aVal
-      }),
+      .sort(sortPublications),
     [publications]
   )
 

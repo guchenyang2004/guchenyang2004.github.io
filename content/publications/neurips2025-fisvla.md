@@ -8,6 +8,7 @@ venue: Neurips
 venueType: conference
 year: 2025
 month: "11"
+acceptanceDate: "2025-09-18"
 status: accepted
 isFirstAuthor: true
 isCorrespondingAuthor: false

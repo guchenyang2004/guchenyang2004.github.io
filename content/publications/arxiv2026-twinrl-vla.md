@@ -5,6 +5,7 @@ authors: [Qinwen Xu, Jiaming Liu, Rui Zhou, Shaojun Shi, Nuowei Han, Zhuoyang Li
 venue: ACM MM
 venueType: conference
 year: 2026
+acceptanceDate: "2026-07-14"
 status: accepted
 isFirstAuthor: false
 isCorrespondingAuthor: false

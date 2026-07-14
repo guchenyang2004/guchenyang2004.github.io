@@ -5,6 +5,7 @@ authors: [Xiaoqi Li, Liang Heng, Jiaming Liu, Yan Shen, Chenyang Gu, Zhuoyang Li
 venue: CoRL
 venueType: conference
 year: 2025
+acceptanceDate: "2025-07-04"
 status: accepted
 isFirstAuthor: false
 isCorrespondingAuthor: false

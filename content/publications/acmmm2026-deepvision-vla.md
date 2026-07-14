@@ -5,6 +5,7 @@ authors: [Yulin Luo*, Hao Chen*, Zhuangzhe Wu*, Bowen Sui*, Jiaming Liu*, Chenya
 venue: ACM MM
 venueType: conference
 year: 2026
+acceptanceDate: "2026-07-14"
 status: accepted
 isFirstAuthor: false
 isCorrespondingAuthor: false

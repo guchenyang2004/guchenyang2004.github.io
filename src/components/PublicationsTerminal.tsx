@@ -36,6 +36,7 @@ import { useTranslation } from 'react-i18next'
 import { FaChartBar, FaVideo, FaProjectDiagram, FaFileAlt, FaAtom, FaStar, FaRobot, FaGlobe, FaHandRock, FaCloudSun, FaFutbol } from 'react-icons/fa'
 import { IconType } from 'react-icons'
 import { highlightData } from '../utils/highlightData'
+import { sortPublications } from '@/utils/publicationSort'
 import { publicationVenueColors, terminalPalette } from '@/config/theme'
 
 /* ── Emoji → Icon mapping ─────────────────────────────────────── */
@@ -142,11 +143,8 @@ const PublicationsTerminal: React.FC = () => {
       filtered = filtered.filter(pub => !pub.isFirstAuthor && !pub.isCoFirst)
     }
     
-    // Sort by year (newest first), then by month
-    filtered.sort((a, b) => {
-      if (b.year !== a.year) return b.year - a.year
-      return 0
-    })
+    // Keep arXiv preprints first, then sort accepted papers by acceptance date.
+    filtered.sort(sortPublications)
     
     return filtered
   }, [publications, searchQuery, selectedYear, selectedVenue, selectedRole])

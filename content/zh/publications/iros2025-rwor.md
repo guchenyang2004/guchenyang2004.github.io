@@ -5,6 +5,7 @@ authors: [Liang Heng, Xiaoqi Li, Shangqing Mao, Jiaming Liu, Ruolin Liu, Jingli 
 venue: IROS
 venueType: conference
 year: 2025
+acceptanceDate: "2025-06-30"
 status: accepted
 isFirstAuthor: false
 isCorrespondingAuthor: false
