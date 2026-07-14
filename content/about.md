@@ -3,7 +3,7 @@ journeyPhases:
   - period: "2022 – 2026"
     title: Undergraduate Research & Academic Excellence
     org: Peking University / EECS
-    description: "**B.S. in Information and Computing Science** at **Peking University**, School of Electronics Engineering and Computer Science. Received the **Huanyu Information Seeking Scholarship** (¥20,000, highest honor of PKU EECS), **Yanchuang Capital Scholarship** (×2), and **Huatai Securities Scholarship**. Named **Merit Student** (×2) and **Outstanding Student Leader**. Published **12 papers** at top venues including CVPR, ACM MM, ICML, ICLR, NeurIPS, ICRA, RSS, IROS, and CoRL."
+    description: "**B.S. in Information and Computing Science** at **Peking University**, School of Electronics Engineering and Computer Science. Received the **Huanyu Information Seeking Scholarship** (¥20,000, highest honor of PKU EECS), **Yanchuang Capital Scholarship** (×2), and **Huatai Securities Scholarship**. Named **Merit Student** (×2) and **Outstanding Student Leader**. Authored **16 papers and preprints**, including publications at CVPR, ACM MM, ICML, ICLR, NeurIPS, ICRA, RSS, IROS, and CoRL."
     tags: [Peking University, Information Science, EECS, Embodied AI]
   - period: "Nov 2024 – Jun 2025"
     title: Embodied AI Research
@@ -50,6 +50,6 @@ version:
 ---
 Chenyang Gu is an undergraduate researcher at Peking University, School of Electronics Engineering and Computer Science, majoring in Information and Computing Science (2022–2026). His research focuses on embodied AI, vision-language-action (VLA) models, robotic manipulation, and 3D vision.
 
-He has published 12 papers at top-tier venues including CVPR, ACM MM, ICML, ICLR, NeurIPS, ICRA, RSS, IROS, and CoRL, with first-author and co-first-author publications at CVPR 2026, NeurIPS 2025, and CVPR 2025. His work spans unified VLA architectures, dual-system foundation models for fast manipulation, and 3D representation learning for robust robotic control.
+He has authored 16 papers and preprints, including publications at top-tier venues such as CVPR, ACM MM, ICML, ICLR, NeurIPS, ICRA, RSS, IROS, and CoRL, with first-author and co-first-author publications at CVPR 2026, NeurIPS 2025, and CVPR 2025. His work spans unified VLA architectures, dual-system foundation models for fast manipulation, and 3D representation learning for robust robotic control.
 
 Chenyang has gained extensive research experience through internships at BAAI, Zhipingfang Tech, and Zhijian Power, working on real-robot deployment and full-stack embodied AI systems.
