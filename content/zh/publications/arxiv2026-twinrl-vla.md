@@ -2,12 +2,13 @@
 id: arxiv2026-twinrl-vla
 title: "TwinRL-VLA: Digital Twin-Driven Reinforcement Learning for Real-World Robotic Manipulation"
 authors: [Qinwen Xu, Jiaming Liu, Rui Zhou, Shaojun Shi, Nuowei Han, Zhuoyang Liu, Chenyang Gu, Shuo Gu, Yang Yue, Gao Huang, Wenzhao Zheng, Sirui Han, Peng Jia, Shanghang Zhang]
-venue: arXiv
-venueType: preprint
+venue: ACM MM
+venueType: conference
 year: 2026
-status: preprint
+status: accepted
 isFirstAuthor: false
 isCorrespondingAuthor: false
+tagline: "利用数字孪生环境驱动强化学习，实现安全、高效的真实世界机器人操控。"
 featuredImage: /images/publications/twinrl.png
 links:
   arxiv: "https://arxiv.org/abs/2602.09023"

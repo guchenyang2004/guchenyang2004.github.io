@@ -1,6 +1,32 @@
 [
   {
     "type": "publication",
+    "badge": "2 篇论文",
+    "title": "🎉 ACM MM 2026",
+    "description": "",
+    "date": "2026年7月",
+    "sortDate": "2026-07-14",
+    "links": [],
+    "papers": [
+      {
+        "title": "Look Before Acting：增强视觉语言动作模型中的视觉基础表示（DeepVision-VLA）。",
+        "links": [
+          { "url": "https://arxiv.org/abs/2603.15618", "icon": "FaFileAlt", "text": "arXiv" },
+          { "url": "https://deepvision-vla.github.io/", "icon": "FaGlobe", "text": "项目主页" }
+        ]
+      },
+      {
+        "title": "TwinRL-VLA：面向真实世界机器人操控的数字孪生驱动强化学习。",
+        "links": [
+          { "url": "https://arxiv.org/abs/2602.09023", "icon": "FaFileAlt", "text": "arXiv" },
+          { "url": "https://github.com/zhourui9813/TwinRL", "icon": "FaGithub", "text": "代码" },
+          { "url": "https://sites.google.com/view/twinrl/twinrl", "icon": "FaGlobe", "text": "项目主页" }
+        ]
+      }
+    ]
+  },
+  {
+    "type": "publication",
     "badge": "Spotlight",
     "title": "🎉 ICML 2026",
     "description": "LaST₀：面向机器人视觉语言动作模型的潜在时空思维链。（Spotlight）",

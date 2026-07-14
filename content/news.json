@@ -1,6 +1,32 @@
 [
   {
     "type": "publication",
+    "badge": "2 Papers",
+    "title": "🎉 ACM MM 2026",
+    "description": "",
+    "date": "July 2026",
+    "sortDate": "2026-07-14",
+    "links": [],
+    "papers": [
+      {
+        "title": "Look Before Acting: Enhancing Vision Foundation Representations for Vision-Language-Action Models (DeepVision-VLA).",
+        "links": [
+          { "url": "https://arxiv.org/abs/2603.15618", "icon": "FaFileAlt", "text": "arXiv" },
+          { "url": "https://deepvision-vla.github.io/", "icon": "FaGlobe", "text": "Project" }
+        ]
+      },
+      {
+        "title": "TwinRL-VLA: Digital Twin-Driven Reinforcement Learning for Real-World Robotic Manipulation.",
+        "links": [
+          { "url": "https://arxiv.org/abs/2602.09023", "icon": "FaFileAlt", "text": "arXiv" },
+          { "url": "https://github.com/zhourui9813/TwinRL", "icon": "FaGithub", "text": "Code" },
+          { "url": "https://sites.google.com/view/twinrl/twinrl", "icon": "FaGlobe", "text": "Project" }
+        ]
+      }
+    ]
+  },
+  {
+    "type": "publication",
     "badge": "Spotlight",
     "title": "🎉 ICML 2026",
     "description": "LaST₀: Latent Spatio-Temporal Chain-of-Thought for Robotic Vision-Language-Action Model. (Spotlight)",
