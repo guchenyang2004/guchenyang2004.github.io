@@ -576,8 +576,9 @@ const PublicationsTerminal: React.FC = () => {
                     </HStack>
                     <Text fontSize="sm" color={termSecondary}>
                       {pub.authors.map((author, i) => {
-                        const cleanAuthor = author.replace('*', '')
+                        const cleanAuthor = author.replace(/\*/g, '').trim()
                         const hasAsterisk = author.includes('*')
+                        const isCoFirstAuthor = pub.isCoFirst && pub.coFirstAuthors?.includes(cleanAuthor)
                         const isOwner = (siteOwner.name.authorVariants as readonly string[]).includes(cleanAuthor)
                         
                         return (
@@ -585,14 +586,14 @@ const PublicationsTerminal: React.FC = () => {
                             {isOwner ? (
                               <Text as="span" color={termSuccess} fontWeight="bold">
                                 {cleanAuthor}
-                                {hasAsterisk && <Text as="sup" color={termWarning}>*</Text>}
-                                {pub.isFirstAuthor && i === 0 && !hasAsterisk && " (1st)"}
+                                {(hasAsterisk || isCoFirstAuthor) && <Text as="sup" color={termWarning}>*</Text>}
+                                {pub.isFirstAuthor && i === 0 && !hasAsterisk && !isCoFirstAuthor && " (1st)"}
                                 {pub.isCorrespondingAuthor && " (†)"}
                               </Text>
                             ) : (
                               <>
                                 {cleanAuthor}
-                                {hasAsterisk && <Text as="sup" color={termWarning}>*</Text>}
+                                {(hasAsterisk || isCoFirstAuthor) && <Text as="sup" color={termWarning}>*</Text>}
                               </>
                             )}
                             {i < pub.authors.length - 1 ? ", " : ""}

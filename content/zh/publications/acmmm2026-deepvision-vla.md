@@ -1,7 +1,7 @@
 ---
 id: acmmm2026-deepvision-vla
 title: "Look Before Acting: Enhancing Vision Foundation Representations for Vision-Language-Action Models"
-authors: [Yulin Luo*, Hao Chen*, Zhuangzhe Wu*, Bowen Sui*, Jiaming Liu*, Chenyang Gu, Zhuoyang Liu, Qiuxuan Feng, Jiale Yu, Shuo Gu, Peng Jia, Pheng-Ann Heng, Shanghang Zhang]
+authors: [Yulin Luo, Hao Chen, Zhuangzhe Wu, Bowen Sui, Jiaming Liu, Chenyang Gu, Zhuoyang Liu, Qiuxuan Feng, Jiale Yu, Shuo Gu, Peng Jia, Pheng-Ann Heng, Shanghang Zhang]
 venue: ACM MM
 venueType: conference
 year: 2026
