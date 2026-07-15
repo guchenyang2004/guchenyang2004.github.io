@@ -8,11 +8,14 @@ year: 2026
 month: "06"
 preprintDate: "2026-06-22"
 status: preprint
+isCoFirst: true
+coFirstAuthors: [Jiaming Liu, Yinxi Wang, Chenyang Gu]
 isFirstAuthor: false
 isCorrespondingAuthor: false
 tagline: "在共享的潜在物理推理空间中对齐人手与机器人演示，实现可扩展的跨本体操控学习。"
 keywords: [VLA, 潜在推理, 人类演示, 跨本体学习]
 featuredImage: /images/publications/lasthd.png
+specialBadges: ["Co-First"]
 links:
   arxiv: "https://arxiv.org/abs/2606.23685"
   project: "https://siriyep.github.io/last-hd-project-page/"

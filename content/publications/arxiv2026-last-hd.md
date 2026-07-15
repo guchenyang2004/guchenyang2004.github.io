@@ -8,11 +8,14 @@ year: 2026
 month: "06"
 preprintDate: "2026-06-22"
 status: preprint
+isCoFirst: true
+coFirstAuthors: [Jiaming Liu, Yinxi Wang, Chenyang Gu]
 isFirstAuthor: false
 isCorrespondingAuthor: false
 tagline: "Aligns human-hand and robot demonstrations in a shared latent physical reasoning space for scalable cross-embodiment manipulation learning."
 keywords: [VLA, Latent Reasoning, Human Demonstrations, Cross-Embodiment]
 featuredImage: /images/publications/lasthd.png
+specialBadges: ["Co-First"]
 links:
   arxiv: "https://arxiv.org/abs/2606.23685"
   project: "https://siriyep.github.io/last-hd-project-page/"
