@@ -3,7 +3,7 @@ journeyPhases:
   - period: "2022 – 2026"
     title: Undergraduate Research & Academic Excellence
     org: Peking University / EECS
-    description: "Received my **B.S. in Information and Computing Science** from **Peking University**, School of Electronics Engineering and Computer Science in June 2026. Named **Outstanding Graduate** by **Peking University** and **Beijing Municipal Universities**, and received **PKU EECS Top 10 Undergraduate Thesis** plus **Peking University Outstanding Undergraduate Thesis** honors. Also received the **Huanyu Information Seeking Scholarship** (¥20,000, highest honor of PKU EECS), **Yanchuang Capital Scholarship** (×2), and **Huatai Securities Scholarship**. Authored **16 papers and preprints**, including publications at CVPR, ACM MM, ICML, ICLR, NeurIPS, ICRA, RSS, IROS, and CoRL."
+    description: "Received my **B.S. in Information and Computing Science** from **Peking University**, School of Electronics Engineering and Computer Science in June 2026. Named **Outstanding Graduate** by **Peking University** and **Beijing Municipal Universities**, and received **PKU EECS Top 10 Undergraduate Thesis** plus **Peking University Outstanding Undergraduate Thesis** honors. Also received the **Huanyu Information Seeking Scholarship** (¥20,000, highest honor of PKU EECS), **Yanchuang Capital Scholarship** (×2), and **Huatai Securities Scholarship**. Authored **17 accepted and under-review papers**, including publications at CVPR, ACM MM, ICML, ICLR, NeurIPS, ICRA, RSS, IROS, and CoRL."
     tags: [Peking University, Information Science, EECS, Embodied AI]
   - period: "Nov 2024 – Jun 2025"
     title: Embodied AI Research
@@ -55,6 +55,6 @@ version:
 ---
 Chenyang Gu is a Ph.D. student in Computer Science and Technology at Peking University, School of Computer Science (2026–2031). He received his B.S. in Information and Computing Science from Peking University, School of Electronics Engineering and Computer Science in June 2026, with Outstanding Graduate honors from Peking University and Beijing Municipal Universities, plus PKU EECS Top 10 Undergraduate Thesis and Peking University Outstanding Undergraduate Thesis honors. His research focuses on embodied AI, vision-language-action (VLA) models, robotic manipulation, and 3D vision.
 
-He has authored 16 papers and preprints, including publications at top-tier venues such as CVPR, ACM MM, ICML, ICLR, NeurIPS, ICRA, RSS, IROS, and CoRL, with first-author and co-first-author publications at CVPR 2026, NeurIPS 2025, and CVPR 2025. His work spans unified VLA architectures, dual-system foundation models for fast manipulation, and 3D representation learning for robust robotic control.
+He has authored 17 accepted and under-review papers, including publications at top-tier venues such as CVPR, ACM MM, ICML, ICLR, NeurIPS, ICRA, RSS, IROS, and CoRL, with first-author and co-first-author publications at CVPR 2026, NeurIPS 2025, and CVPR 2025. His work spans unified VLA architectures, dual-system foundation models for fast manipulation, and 3D representation learning for robust robotic control.
 
 Chenyang has gained extensive research experience through internships at BAAI, Zhipingfang Tech, and Zhijian Power, working on real-robot deployment and full-stack embodied AI systems.
