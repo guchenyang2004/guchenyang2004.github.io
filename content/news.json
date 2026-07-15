@@ -1,5 +1,14 @@
 [
   {
+    "type": "award",
+    "badge": "4 Honors",
+    "title": "🎓 Graduated from Peking University",
+    "description": "Completed my B.S. in Information and Computing Science in June 2026, receiving Outstanding Graduate honors from Peking University and Beijing Municipal Universities, plus PKU EECS Top 10 Undergraduate Thesis and Peking University Outstanding Undergraduate Thesis.",
+    "date": "June 2026",
+    "sortDate": "2026-06-30",
+    "links": []
+  },
+  {
     "type": "publication",
     "badge": "2 Papers",
     "title": "🎉 ACM MM 2026",

@@ -12,6 +12,7 @@ isFirstAuthor: false
 isCorrespondingAuthor: false
 tagline: "Lifts pretrained 2D representations into explicit 3D geometry and dynamics-aware reasoning for temporally coherent VLA manipulation."
 keywords: [VLA, 3D Geometry, Physical Dynamics, Robot Manipulation]
+featuredImage: /images/publications/lift3dvla.png
 links:
   arxiv: "https://arxiv.org/abs/2607.06564"
   project: "https://lift3dvla.github.io/"

@@ -29,6 +29,7 @@
     "demo": "Demo",
     "dataset": "Dataset",
     "wechat": "WeChat",
+    "teaching": "Teaching Assistant",
     "awardsAndHonors": "Awards & Honors",
     "awardsSpanning": "awards spanning",
     "categories": "categories"
@@ -57,7 +58,7 @@
     "roleResearch": "Research",
     "roleMLE": "MLE",
     "roleSDE": "SDE",
-    "roleTeaching": "Teaching",
+    "roleTeaching": "Teaching Assistant",
     "roleLeadership": "Leadership"
   },
   "projects": {

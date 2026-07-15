@@ -5,7 +5,7 @@ import DynamicIcon from '../DynamicIcon'
 
 const roleIcons: Record<string, string> = {
   instructor: 'FaChalkboardTeacher',
-  ta: 'FaUserGraduate',
+  ta: 'FaGraduationCap',
   'guest-lecturer': 'FaMicrophone',
   'co-instructor': 'FaUsers',
   other: 'FaBook',
@@ -18,6 +18,13 @@ const TeachingSection: React.FC = () => {
   const textColor = useColorModeValue('gray.500', 'gray.400')
   const titleColor = useColorModeValue('gray.800', 'gray.100')
   const mutedColor = useColorModeValue('gray.400', 'gray.500')
+  const roleLabels: Record<string, string> = {
+    instructor: 'Instructor',
+    ta: t('experience.roleTeaching', 'Teaching Assistant'),
+    'guest-lecturer': 'Guest Lecturer',
+    'co-instructor': 'Co-Instructor',
+    other: t('about.teaching', 'Teaching'),
+  }
 
   if (!teaching || teaching.length === 0) return null
 
@@ -49,7 +56,7 @@ const TeachingSection: React.FC = () => {
                 </Text>
                 <HStack spacing={2} mt={0.5} flexWrap="wrap">
                   <Text fontSize="2xs" color={textColor}>{entry.institution}</Text>
-                  <Text fontSize="2xs" color={mutedColor}>· {entry.role}</Text>
+                  <Text fontSize="2xs" color={mutedColor}>· {roleLabels[entry.role] || entry.role}</Text>
                 </HStack>
                 {entry.description && <Text fontSize="2xs" color={textColor} mt={1}>{entry.description}</Text>}
               </Box>

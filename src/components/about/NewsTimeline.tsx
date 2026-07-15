@@ -34,24 +34,6 @@ const rainbow = keyframes`
   100% { color: #bf616a; }
 `;
 
-// Format date to YYYY-MM-DD
-const formatDate = (dateString: string = ""): string => {
-  if (!dateString) return "0000-00-00";
-  
-  // Simple conversion for dates like "Jan 2023"
-  const months: Record<string, string> = {
-    'Jan': '01', 'Feb': '02', 'Mar': '03', 'Apr': '04', 'May': '05', 'Jun': '06',
-    'Jul': '07', 'Aug': '08', 'Sep': '09', 'Oct': '10', 'Nov': '11', 'Dec': '12'
-  };
-  
-  const parts = dateString.split(' ');
-  if (parts.length === 2 && months[parts[0]]) {
-    return `${parts[1]}-${months[parts[0]]}-01`;
-  }
-  
-  return dateString;
-};
-
 // Truncate text with ellipsis
 const truncateText = (text: string, maxLength: number): string => {
   if (!text) return "";
@@ -576,7 +558,7 @@ const NewsTimeline: React.FC<NewsTimelineProps> = ({ news, showHeader: _showHead
                 bg={expandedItems[index] ? (isDark ? 'rgba(76,86,106,0.2)' : 'rgba(203,213,225,0.3)') : 'transparent'}
               >
                 <Text w={dateColumnWidth} color={termHighlight} fontWeight="medium" isTruncated>
-                  {formatDate(item.date)}
+                  {item.date}
                 </Text>
                 <Box w={typeColumnWidth}>
                   <Flex

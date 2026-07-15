@@ -12,6 +12,7 @@ isFirstAuthor: false
 isCorrespondingAuthor: false
 tagline: "将预训练二维表示提升至显式三维几何与动态感知推理，实现时间一致的VLA机器人操控。"
 keywords: [VLA, 三维几何, 物理动态, 机器人操控]
+featuredImage: /images/publications/lift3dvla.png
 links:
   arxiv: "https://arxiv.org/abs/2607.06564"
   project: "https://lift3dvla.github.io/"
