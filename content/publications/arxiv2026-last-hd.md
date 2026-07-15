@@ -9,7 +9,7 @@ month: "06"
 preprintDate: "2026-06-22"
 status: preprint
 isCoFirst: true
-coFirstAuthors: [Jiaming Liu, Yinxi Wang, Chenyang Gu]
+coFirstAuthors: [Jiaming Liu, Yinxi Wang, Chenyang Gu, Siyuan Qian, Xiangju Mi]
 isFirstAuthor: false
 isCorrespondingAuthor: false
 tagline: "Aligns human-hand and robot demonstrations in a shared latent physical reasoning space for scalable cross-embodiment manipulation learning."

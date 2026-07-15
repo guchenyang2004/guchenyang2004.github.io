@@ -9,7 +9,7 @@ month: "06"
 preprintDate: "2026-06-22"
 status: preprint
 isCoFirst: true
-coFirstAuthors: [Jiaming Liu, Yinxi Wang, Chenyang Gu]
+coFirstAuthors: [Jiaming Liu, Yinxi Wang, Chenyang Gu, Siyuan Qian, Xiangju Mi]
 isFirstAuthor: false
 isCorrespondingAuthor: false
 tagline: "在共享的潜在物理推理空间中对齐人手与机器人演示，实现可扩展的跨本体操控学习。"
